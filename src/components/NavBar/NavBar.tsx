@@ -1,10 +1,12 @@
 import WebsiteLogo from "../../assets/images/LSPWebLogo.png";
 import { BiCategory, BiCartAlt, BiSearchAlt, BiHomeAlt } from "react-icons/bi";
-import { TiInfoLarge } from "react-icons/ti";
 import { CgOptions } from "react-icons/cg";
 import "./NavBar.css";
 
-const NavBar = () => {
+interface NavBarProps{
+  search: (value:string) => void;
+}
+const NavBar = ({search}:NavBarProps) => {
   const BOOKCAT = ["Science Fiction", "Psychology", "Horror", "Novel"];
 
   return (
@@ -72,7 +74,7 @@ const NavBar = () => {
           </ul>
           <div className="d-flex input-search">
             <BiSearchAlt className="input-search-icon" />
-            <input className="form-control" type="search" name="search-key" placeholder="Search" aria-label="Search" />
+            <input className="form-control" type="search" name="search-key" placeholder="Search" aria-label="Search" onChange={(event) => search(event.target.value)}/>
           </div>
         </div>
       </div>

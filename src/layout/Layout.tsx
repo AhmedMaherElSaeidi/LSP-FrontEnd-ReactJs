@@ -1,19 +1,21 @@
-import {ReactNode} from 'react'
-import Footer from '../components/Footer/Footer';
-import NavBar from '../components/NavBar/NavBar';
+import { ReactNode, useState  } from "react";
+import Footer from "../components/Footer/Footer";
+import NavBar from "../components/NavBar/NavBar";
 
 interface LayoutProps {
-    children : ReactNode;
+  children: ReactNode;
 }
 
-const Layout = ({children}:LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
+  const [search, setSearch] = useState("*")
+  const search_for = (value: string) => setSearch(value);
   return (
     <>
-    <NavBar/>
-    {children}
-    <Footer/>
+      <NavBar search={search_for}/>
+      {children}
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
