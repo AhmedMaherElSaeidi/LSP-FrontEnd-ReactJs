@@ -1,22 +1,24 @@
 import { BsTrashFill } from "react-icons/bs";
-import "./BookModelCart.css";
+import "./BookCart.css";
 
-interface BookModelCartProps {
+interface BookCartProps {
+  isbn: string;
   cover: string;
   title: string;
   author: string;
+  remove: (id:string) => void;
 }
-const BookModelCart = ({ title, author, cover }: BookModelCartProps) => {
+const BookCart = ({ isbn, title, author, cover, remove }: BookCartProps) => {
   return (
-    <section className="book-card">
+    <section className="book-cart">
       <img src={cover} alt="Book_Cover" />
-      <section className="card-cover text-gold">
+      <section className="cart-cover text-gold">
         <h5 className="mb-1">{title}</h5>
-        <h6 className="card-title mb-0">{author}</h6>
+        <h6 className="cart-title mb-0">{author}</h6>
       </section>
-      <section className="card-content">
+      <section className="cart-content">
         <section>
-          <span className="trash-icon text-gold" title="Return book">
+          <span className="trash-icon text-gold" title="Return book" onClick={() => remove(isbn)}>
             <BsTrashFill />
           </span>
         </section>
@@ -25,4 +27,4 @@ const BookModelCart = ({ title, author, cover }: BookModelCartProps) => {
   );
 };
 
-export default BookModelCart;
+export default BookCart;

@@ -49,12 +49,17 @@ const NavBar = () => {
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Log Out
+                    Sign Out
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Log In
+                    Sign In
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Sign Up
                   </a>
                 </li>
               </ul>

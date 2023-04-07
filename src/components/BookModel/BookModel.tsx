@@ -11,20 +11,21 @@ interface BookModelProps {
   category: string;
   cover: string;
   booker?: object;
+  remove: (id:string) => void;
 }
-const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker }: BookModelProps) => {
+const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker, remove }: BookModelProps) => {
   return (
-    <section className="book-card">
+    <section className="book-model">
       <img src={cover} alt="Book_Cover" />
-      <section className="card-cover text-gold">
+      <section className="model-cover text-gold">
         <h5 className="mb-1">{title}</h5>
-        <p className="card-text">{author}</p>
-        <p className="card-text">{category}</p>
+        <p className="model-text">{author}</p>
+        <p className="model-text">{category}</p>
       </section>
-      <section className="card-content text-gold">
+      <section className="model-content text-gold">
         <section>
-          <h5 className="card-title mb-0">ISBN {isbn}</h5>
-          <p className="card-text">Rack {rackNumber}</p>
+          <h5 className="model-title mb-0">ISBN {isbn}</h5>
+          <p className="model-text">Rack {rackNumber}</p>
           <SiAddthis className="fs-3 add-icon" title="Borrow book"/>
         </section>
       </section>
@@ -32,7 +33,7 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker }:
         <FiEdit />
       </span>
       <span className="trash-icon text-gold">
-        <BsTrashFill />
+        <BsTrashFill onClick={() => remove(isbn)}/>
       </span>
     </section>
   );

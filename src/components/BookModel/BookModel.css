@@ -1,4 +1,4 @@
-.book-card {
+.book-model {
     width: 16em;
     margin: 0.75em;
     height: 23em;
@@ -9,44 +9,48 @@
     box-shadow: 0 0 17px #333;
 }
 
-/* CARD IMAGE */
-.book-card>img {
+.book-model:hover {
+    transform: translateX(1%) translateY(1%);
+}
+
+/* MODEL IMAGE */
+.book-model>img {
     width: 100%;
     height: 23em;
 }
 
-/* CARD COVER */
-.book-card>.card-cover {
+/* MODEL COVER */
+.book-model>.model-cover {
     position: absolute;
     left: 1em;
     top: 70%;
 }
 
-/* CARD ICONS */
-.book-card>span {
+/* MODEL ICONS */
+.book-model>span {
     opacity: 20%;
     font-size: 1.25em;
 }
 
-.book-card>span:hover {
+.book-model>span:hover {
     cursor: pointer;
     opacity: 100%;
 }
 
-.book-card>.edit-icon {
+.book-model>.edit-icon {
     position: absolute;
     top: 90%;
     right: 1.5em;
 }
 
-.book-card>.trash-icon {
+.book-model>.trash-icon {
     position: absolute;
     top: 90%;
     right: .35em;
 }
 
-/* CARD CONTENT HOVER */
-.book-card>.card-content {
+/* MODEL CONTENT HOVER */
+.book-model>.model-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -58,18 +62,18 @@
     transition: opacity 0.5s;
 }
 
-.book-card>.card-content>section {
+.book-model>.model-content>section {
     position: absolute;
-    top: 30%;
-    left: 6em;
+    top: 20%;
+    left: 40%;
 }
 
-.book-card>.card-content .add-icon:hover {
+.book-model>.model-content .add-icon:hover {
     cursor: pointer;
     opacity: 70%;
 }
 
-.book-card:hover .card-content {
+.book-model:hover .model-content {
     visibility: visible;
     opacity: 1;
 }

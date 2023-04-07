@@ -1,0 +1,26 @@
+.cart-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #624a2eb3;
+    border-radius: 0.5em;
+    overflow: hidden;
+    padding: 1em 0em;
+    margin-bottom: 1em;
+}
+
+.cart-row>.book-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-row>.book-details>.book-details-bottom-border {
+    border-bottom: 0.25em solid orangered;
+    border-bottom-right-radius: 2em;
+}
+
+.cart-row:hover {
+    transform: translateX(.75%)
+}
