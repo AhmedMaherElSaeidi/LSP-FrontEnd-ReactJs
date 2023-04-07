@@ -44,7 +44,7 @@ const NavBar = () => {
               <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                 <li>
                   <a className="dropdown-item" href="#">
-                    settings
+                    Settings
                   </a>
                 </li>
                 <li>
@@ -62,11 +62,6 @@ const NavBar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <BiCartAlt /> Cart
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-              <TiInfoLarge /> About Us
               </a>
             </li>
           </ul>
