@@ -1,0 +1,49 @@
+.cart-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(/src/assets/images/CartBKG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(95%);
+    min-height: 100vh;
+}
+
+.books-table {
+    padding: 1em;
+}
+
+.books-table>.books-table-header {
+    display: flex;
+    margin: .25em 0em;
+    color: goldenrod;
+    justify-content: space-around;
+    border-bottom: 0.25em solid goldenrod;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+
+.books-table>.books-table-header>p {
+    margin: auto;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.books-table>.books-table-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: .5em;
+}
+
+.books-table>.books-table-row>.book-details {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book-details>.book-details-bottom-border {
+    border-bottom: 0.25em solid orangered;
+    border-bottom-right-radius: 2em;
+}

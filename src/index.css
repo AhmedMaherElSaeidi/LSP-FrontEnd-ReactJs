@@ -1,0 +1,15 @@
+.text-gold {
+    color: gold !important;
+}
+
+.small-text {
+    font-size: .8em
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,23 @@
+.navbar-brand {
+    padding: 0em !important;
+}
+
+.navbar-brand>img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.dropdown-item:hover,
+.nav-link:hover {
+    color: gold !important;
+}
+
+.input-search {
+    position: relative;
+}
+
+.input-search>.input-search-icon {
+    position: absolute;
+    top: 25%;
+    left: .5em;
+}
