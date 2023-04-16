@@ -1,4 +1,4 @@
-import BookCarRow from "../../components/BookCarRow/BookCarRow";
+import BookCartRow from "../../components/BookCartRow/BookCartRow";
 import data from "../../core/services";
 import "./CartPage.css";
 
@@ -17,7 +17,7 @@ const CartPage = () => {
         </section>
         {_data.map((obj, index) => {
           return (
-            <BookCarRow key={index} isbn={obj.isbn} title={obj.title} author={obj.author} rackNumber={obj.rackNumber} cover={obj.cover} category={obj.category} remove={remove_book}/>
+            <BookCartRow key={index} isbn={obj.isbn} title={obj.title} author={obj.author} rackNumber={obj.rackNumber} cover={obj.cover} category={obj.category} remove={remove_book}/>
           );
         })}
       </section>

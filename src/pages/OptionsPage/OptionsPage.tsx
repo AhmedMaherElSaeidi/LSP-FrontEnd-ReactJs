@@ -1,6 +1,13 @@
+import CreateBook from "../../components/CreateBook/CreateBook"
+
 const OptionsPage = () => {
   return (
-    <div>OptionsPage</div>
+    <section className="options-page">
+      <aside></aside>
+      <section>
+        <CreateBook/>
+      </section>
+    </section>
   )
 }
 

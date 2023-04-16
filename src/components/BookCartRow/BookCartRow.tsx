@@ -13,7 +13,7 @@ interface BookCartRowProps {
     remove: (id:string) => void;
 }
 
-const BookCarRow = ({ isbn, rackNumber, title, author, category, cover, booker, remove}:BookCartRowProps) => {
+const BookCartRow = ({ isbn, rackNumber, title, author, category, cover, booker, remove}:BookCartRowProps) => {
   return (
     <section className="cart-row">
       <BookCart isbn={isbn} title={title} author={author} cover={cover} remove={remove}/>
@@ -31,4 +31,4 @@ const BookCarRow = ({ isbn, rackNumber, title, author, category, cover, booker, 
   );
 };
 
-export default BookCarRow;
+export default BookCartRow;

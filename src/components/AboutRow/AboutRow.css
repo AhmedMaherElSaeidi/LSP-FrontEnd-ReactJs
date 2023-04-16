@@ -1,0 +1,13 @@
+.about-p {
+    font-size: 1.1em;
+}
+
+.text-wheat {
+    color: #f7f1e3;
+}
+
+@media screen and (max-width: 560px) {
+    .about-p {
+        font-size: 1em;
+    }
+}

@@ -1,5 +1,6 @@
 import WebsiteLogo from "../../assets/images/LSPWebLogo.png";
 import { BiCategory, BiCartAlt, BiSearchAlt, BiHomeAlt } from "react-icons/bi";
+import { TiInfoLarge } from "react-icons/ti";
 import { CgOptions } from "react-icons/cg";
 import "./NavBar.css";
 
@@ -69,6 +70,11 @@ const NavBar = ({search}:NavBarProps) => {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <BiCartAlt /> Cart
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <TiInfoLarge /> AboutUs
               </a>
             </li>
           </ul>

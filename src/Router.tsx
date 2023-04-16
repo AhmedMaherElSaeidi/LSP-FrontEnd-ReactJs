@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import OptionsPage from "./pages/OptionsPage/OptionsPage";
 import Register from "./pages/RegisterPage/RegisterPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 import CartPage from "./pages/CartPage/CartPage";
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/LoginPage/LoginPage";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
 {
     path:"/options",
     element: <Layout><OptionsPage/></Layout>
+},
+{
+    path:"/about",
+    element: <Layout><AboutPage/></Layout>
 },
 ]);
 

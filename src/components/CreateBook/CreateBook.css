@@ -1,0 +1,74 @@
+.book-creation {
+    width: 40em;
+    overflow: hidden;
+    margin: 1em auto;
+    position: relative;
+    border-radius: .35em;
+    background-color: #624a2e;
+}
+
+.book-creation .book-input>input:focus {
+    box-shadow: none !important;
+}
+/* BOOK LEFT COVER */
+.book-creation .book-lcover {
+    position: relative;
+}
+
+.book-creation .book-lcover>img {
+    height: 24em;
+    width: 18em;
+}
+
+.book-creation .book-lcover>img:hover {
+    animation: bright 1s ease;
+}
+
+.book-creation .book-lcover>.book-input>input {
+    background-color: transparent !important;
+    border: none;
+    width: 10em;
+    font-size: 1.1em;
+    text-align: start;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.book-creation .book-lcover>.book-input {
+    position: absolute;
+}
+
+.book-creation .book-lcover>.title-input-lcover {
+    top: 70%;
+}
+
+.book-creation .book-lcover>.author-input-lcover {
+    top: 75%;
+}
+
+.book-creation .book-lcover>.category-input-lcover {
+    top: 82%;
+}
+
+/* BOOK RIGHT CONTENT */
+.book-creation .book-rcontent {
+    padding: 1em;
+}
+
+.book-creation .book-rcontent .book-input>input {
+    background-color: transparent !important;
+    border: none;
+    width: 15em;
+    text-align: start;
+    color: goldenrod;
+}
+
+@keyframes bright {
+    from {
+        filter: brightness(120%) blur(.5em);
+    }
+
+    to {
+        filter: none;
+    }
+}
