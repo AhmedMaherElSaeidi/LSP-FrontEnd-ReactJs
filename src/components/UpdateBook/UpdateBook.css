@@ -1,0 +1,86 @@
+.book-edit {
+    width: 40em;
+    overflow: hidden;
+    margin: 1em auto;
+    position: relative;
+    border-radius: .35em;
+    background-color: #624a2e;
+}
+
+.book-edit .book-input>input:focus,
+.book-edit .book-input>select:focus {
+    box-shadow: none !important;
+}
+
+/* BOOK LEFT COVER */
+.book-edit .book-lcover {
+    position: relative;
+}
+
+.book-edit .book-lcover>img {
+    height: 24em;
+    width: 18em;
+}
+
+.book-edit .book-lcover>img:hover {
+    animation: bright 1s ease;
+}
+
+.book-edit .book-lcover>.book-input>input,
+.book-edit .book-lcover>.book-input>select {
+    background-color: transparent !important;
+    border: none;
+    width: 10em;
+    font-size: 1.1em;
+    text-align: start;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.book-edit .book-lcover>.book-input {
+    position: absolute;
+}
+
+.book-edit .book-lcover>.title-input-lcover {
+    top: 70%;
+}
+
+.book-edit .book-lcover>.author-input-lcover {
+    top: 75%;
+}
+
+.book-edit .book-lcover>.category-select-lcover {
+    top: 82%;
+}
+
+/* BOOK RIGHT CONTENT */
+.book-edit .book-rcontent {
+    padding: 1em;
+}
+
+.book-edit .book-rcontent .book-input>input {
+    background-color: transparent !important;
+    border: none;
+    width: 15em;
+    text-align: start;
+    color: goldenrod;
+}
+
+@keyframes bright {
+    from {
+        filter: brightness(120%) blur(.5em);
+    }
+
+    to {
+        filter: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .book-edit {
+        width: 18em;
+    }
+    .book-edit>form {
+        flex-direction: column;
+    }
+}

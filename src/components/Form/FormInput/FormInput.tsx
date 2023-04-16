@@ -15,14 +15,14 @@ const FormInput = ({ children = <></>, inputType, inputName, inputPlaceHolder = 
   const [value, setValue] = useState(inputValue)
   const sendData =  (value:string) => {
     setValue(value)
-    inputMethod!(value)
+    if(inputMethod != undefined)
+      inputMethod!(value)
   }
 
   return (
     <section className={inputClass}>
       {children}
-      {inputMethod == undefined && <input type={inputType} name={inputName} placeholder={inputPlaceHolder} className="form-control" required />}
-      {inputMethod != undefined && <input type={inputType} name={inputName} placeholder={inputPlaceHolder} className="form-control" onChange={(event) => {sendData(event.target.value)}} value={value} required />}
+      <input type={inputType} name={inputName} placeholder={inputPlaceHolder} className="form-control" onChange={(event) => {sendData(event.target.value)}} value={value} required />
     </section>
   );
 };

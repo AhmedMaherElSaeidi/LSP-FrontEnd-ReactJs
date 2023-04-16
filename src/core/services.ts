@@ -1,94 +1,111 @@
-const data : any[] = [
-{
+const data: any[] = [
+  {
     isbn: 1,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: true
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: true,
+  },
+  {
     isbn: 2,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: true
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: true,
+  },
+  {
     isbn: 3,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
+  {
     isbn: 4,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
+  {
     isbn: 5,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
+  {
     isbn: 6,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: true
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: true,
+  },
+  {
     isbn: 7,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
+  {
     isbn: 8,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: true
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: true,
+  },
+  {
     isbn: 9,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
-{
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
+  {
     isbn: 10,
-    rackNumber: Math.floor(Math.random()*5 + 1),
+    rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
     category: "Unkown",
-    cover: "https://source.unsplash.com/random",
-    booked: false
-},
+    cover: "https://source.unsplash.com/user/wsanter",
+    booked: false,
+  },
 ];
 
+export const users: any[] = [
+  { name: "person", email: "person@email.com", phone: "123456789", status: "active", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+  { name: "person", email: "person@email.com", phone: "123456789", status: "inactive", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+  { name: "person", email: "person@email.com", phone: "123456789", status: "active", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+  { name: "person", email: "person@email.com", phone: "123456789", status: "inactive", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+  { name: "person", email: "person@email.com", phone: "123456789", status: "active", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+  { name: "person", email: "person@email.com", phone: "123456789", status: "inactive", borrowLimit: Math.floor(Math.random() * 10 + 1) },
+];
+
+export const borrow: any[] = [
+  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "booked" },
+  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "waiting" },
+  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "booked" },
+  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "waiting" },
+];
+
+export const categories: string[] = ["Science Fiction", "Psychology", "Horror", "Novel"];
 export default data;

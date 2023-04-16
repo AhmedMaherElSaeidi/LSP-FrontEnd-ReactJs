@@ -1,0 +1,68 @@
+/* TABLE STRUCTURE */
+.content-table {
+    margin: 1em auto;
+}
+.content-table>table {
+    width: 90%;
+    margin: 0em auto;
+    overflow: hidden;
+    border-radius: 0.15em;
+    background-color: white;
+    animation: slideDownIn 0.5s linear both;
+    -webkit-animation: slideDownIn 0.5s linear both;
+}
+
+.content-table>table>caption {
+    font-weight: bold;
+}
+
+.icon-button {
+    font-size: 1.4em;
+    margin: 0em .35em;
+}
+
+.icon-button:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+/* DUE DATE COL */
+.due-date-col {
+    display: flex;
+    align-items: center;
+}
+
+.due-date-col>.limit-input>input {
+    background-color: transparent !important;
+    border: none;
+    width: 10em;
+    text-align: start;
+    color: white;
+}
+
+.due-date-col>.limit-input>input:focus {
+    color: gainsboro;
+    box-shadow: none !important;
+}
+
+@keyframes slideDownIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+    0% {
+        transform: translateY(-20px);
+        opacity: 0%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .content-table>table {
+        display: none;
+    }
+}
