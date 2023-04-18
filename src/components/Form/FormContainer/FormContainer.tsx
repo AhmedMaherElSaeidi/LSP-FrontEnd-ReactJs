@@ -1,24 +1,24 @@
 import WebsiteLogo from "../../../assets/images/LSPWebLogo.png";
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
-import "./FormBox.css";
+import "./FormContainer.css";
 
-interface FormBoxProps {
+interface FormContainerProps {
   children: ReactNode;
   parentClass: string;
 }
 
-const FormBox = ({ children, parentClass}: FormBoxProps) => {
+const FormContainer = ({ children, parentClass}: FormContainerProps) => {
   return (
     <section className={"container-fluid " + parentClass}>
-      <section className="formbox-header">
+      <section className="form-container-header">
         <Link to="/pages/home">
           <img className="library-logo" src={WebsiteLogo} alt="Website_Logo" title="Home" />
         </Link>
       </section>
-      <section className="formbox-body">{children}</section>
+      <section className="form-container-body">{children}</section>
     </section>
   );
 };
 
-export default FormBox;
+export default FormContainer;

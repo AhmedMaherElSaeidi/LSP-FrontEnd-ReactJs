@@ -1,13 +1,13 @@
-import FormBox from "../../components/Form/FormBox/FormBox";
+import FormContainer from "../../components/Form/FormContainer/FormContainer";
 import FormLogin from "../../components/Form/FormLogin/FormLogin";
 import "./LoginPage.css";
 
 const LoginPage = () => {
 
   return (
-    <FormBox parentClass="login-form">
+    <FormContainer parentClass="login-form">
       <FormLogin/>
-    </FormBox>
+    </FormContainer>
   );
 };
 

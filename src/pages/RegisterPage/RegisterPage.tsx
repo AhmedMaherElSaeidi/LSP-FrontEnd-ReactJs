@@ -1,12 +1,12 @@
-import FormBox from "../../components/Form/FormBox/FormBox";
+import FormContainer from "../../components/Form/FormContainer/FormContainer";
 import FormRegister from "../../components/Form/FormRegister/FormRegister";
 import "./RegisterPage.css";
 
 const RegisterPage = () => {
   return (
-    <FormBox parentClass="regesteration-form">
+    <FormContainer parentClass="regesteration-form">
       <FormRegister />
-    </FormBox>
+    </FormContainer>
   );
 };
 
