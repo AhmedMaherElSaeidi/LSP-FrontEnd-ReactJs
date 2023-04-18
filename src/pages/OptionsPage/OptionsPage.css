@@ -1,7 +1,7 @@
 .options-page {
     display: flex;
     min-height: 100vh;
-    background-color: white;
+    background: linear-gradient(to bottom, #4f78c9, #8fd7fb);
 }
 
 /* ASIDE BAR */
@@ -60,7 +60,6 @@
         margin: 1em auto;
         width: fit-content;
         background-color: unset;
-        border-top: 2px solid white;
     }
 
     .options-aside-bar>ul {
@@ -68,15 +67,12 @@
         width: fit-content;
         margin-bottom: 0em;
     }
-    
+
     .options-aside-bar>ul li {
         padding: .45em !important;
-    }
-    
-    .options-aside-bar>ul li {
         border-bottom: unset !important;
     }
-    
+
     .options-aside-bar>ul a {
         overflow: hidden;
         border-radius: .3em;
@@ -84,6 +80,10 @@
         border-top-right-radius: 1em;
         border-bottom-left-radius: 1em;
         border: 2px solid white !important;
+    }
+
+    .options-aside-bar>ul a:not(:last-child) {
+        margin-right: .4em;
     }
 }
 
