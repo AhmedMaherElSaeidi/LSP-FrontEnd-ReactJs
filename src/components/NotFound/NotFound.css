@@ -1,5 +1,7 @@
 .not-found-page {
-    margin-top: 4em;
+    padding-top: 2em;
+    min-height: 100vh;
+    background-color: #002B36;
 }
 
 .not-found-page>.website-logo {
@@ -8,7 +10,7 @@
 .not-found-page>.website-logo a {
     font-weight: bold;
     font-size: 1.1em;
-    color: #1489b7;
+    color: #14a9b7;
 }
 
 .not-found-page>.website-logo img {
@@ -21,7 +23,7 @@
 .not-found-page>.website-logo a:hover {
     opacity: 80%;
     cursor: pointer;
-    color: gold;
+    color: #00b7ff;
 }
 
 .not-found-page .st0 {
