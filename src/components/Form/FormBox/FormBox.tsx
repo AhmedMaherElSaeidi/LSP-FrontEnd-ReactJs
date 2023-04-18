@@ -17,7 +17,7 @@ const FormBox = ({ children, bgkclass, formWidth, formHeader, formAction = "", f
   return (
     <section className={"container-fluid " + bgkclass}>
       <section className="formbox-header">
-        <Link to="/pages/home"><img className="library-logo" src={WebsiteLogo} alt="Website_Logo" /></Link>        
+        <Link to="/pages/home"><img className="library-logo" src={WebsiteLogo} alt="Website_Logo" title="Home"/></Link>        
       </section>
       <section className="formbox-body">
         <form className={formWidth} action={formAction} method={formMethod}>
