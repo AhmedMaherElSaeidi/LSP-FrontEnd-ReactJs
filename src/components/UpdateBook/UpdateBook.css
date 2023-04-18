@@ -3,8 +3,9 @@
     overflow: hidden;
     margin: 1em auto;
     position: relative;
+    height: fit-content;
     border-radius: .35em;
-    background-color: #624a2e;
+    background-color: #07364287;
 }
 
 .book-edit .book-input>input:focus,
@@ -16,7 +17,7 @@
     cursor: pointer;
 }
 
-/* BOOK LEFT COVER */
+/* BOOK LEFT COVER IMAGE*/
 .book-edit .book-lcover {
     position: relative;
 }
@@ -24,48 +25,59 @@
 .book-edit .book-lcover>img {
     height: 24em;
     width: 18em;
+    filter: brightness(90%);
 }
 
 .book-edit .book-lcover>img:hover {
-    animation: bright 1s ease;
+    animation: bright .5s ease;
 }
 
-.book-edit .book-lcover>.book-input>input,
-.book-edit .book-lcover>.book-input>select {
+/* BOOK LEFT COVER INPUT*/
+.book-edit .book-lcover .book-input>input,
+.book-edit .book-lcover .book-input>select {
     background-color: transparent !important;
     border: none;
     width: 10em;
     font-size: 1.1em;
     text-align: start;
     font-weight: bold;
-    color: goldenrod;
 }
 
-.book-edit .book-lcover>.book-input {
+.book-edit .book-lcover span {
     position: absolute;
+    display: flex;
+    align-items: center;
 }
 
-.book-edit .book-lcover>.title-input-lcover {
-    top: 70%;
-}
-
-.book-edit .book-lcover>.author-input-lcover {
+.book-edit .book-lcover .title-input-lcover {
+    left: 1%;
     top: 75%;
 }
 
-.book-edit .book-lcover>.category-select-lcover {
-    top: 82%;
+.book-edit .book-lcover .author-input-lcover {
+    left: 1%;
+    top: 80%;
 }
 
-.book-edit .book-lcover>.category-select-lcover>select {
-    border: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
+.book-edit .book-lcover .category-select-lcover {
+    left: 1%;
+    top: 90%;
+}
+
+.book-edit .book-lcover .category-select-lcover select {
     text-indent: 1px;
+    border: none !important;
     outline: none !important;
     padding: 0.35em 0.68201em;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
 }
 
+.book-edit .book-lcover .book-input input,
+.book-edit .book-lcover .book-input select {
+    color: #37c6ea;
+    padding-left: .2em;
+}
 /* BOOK RIGHT CONTENT */
 .book-edit .book-rcontent {
     padding: 1em;
@@ -76,7 +88,11 @@
     border: none;
     width: 15em;
     text-align: start;
-    color: goldenrod;
+}
+
+.book-edit .book-rcontent .book-input input,
+.book-edit .book-rcontent .book-input select {
+    color: white;
 }
 
 @keyframes bright {

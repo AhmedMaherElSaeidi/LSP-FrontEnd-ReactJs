@@ -1,11 +1,12 @@
 import { useSearchParams } from "react-router-dom";
 import BookModel from "../../components/BookModel/BookModel";
 import data from "../../core/services";
-import "./HomePage.css";
 import { BiSearchAlt } from "react-icons/bi";
+import "./HomePage.css";
 
-const HomePage = () => {
+const HomePage = () => {  
   const [searchParams] = useSearchParams();
+  
   const remove_book = (bookID: string) => {
     const confirm = prompt("Do you wish to proceed?.");
     if (confirm) console.log(confirm);
@@ -48,22 +49,19 @@ const HomePage = () => {
   const getData = search_for(filter_data_category(filter_data_rack(filter_data_isbn(data))));
   return (
     <section className="home-page">
-      <section className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
+      {/* <section className="navbar navbar-expand-lg navbar-light bg-light">
+        <section className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#filterSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="filterSupportedContent">
-            <div className="input-search">
+          <section className="collapse navbar-collapse" id="filterSupportedContent">
+            <section className="input-search">
               <BiSearchAlt className="input-search-icon" />
               <input className="form-control" type="search" name="search-key" placeholder="Search" aria-label="Search" onChange={(event) => console.log(event.target.value)} />
-            </div>
-          </div>
-          <div className="input-search">
-            
-          </div>
-        </div>
-      </section>
+            </section>
+          </section>
+        </section>
+      </section> */}
       <section className="book-card-list">
         {getData.map((obj, index) => {
           return <BookModel key={index} isbn={obj.isbn} rackNumber={obj.rackNumber} title={obj.title} author={obj.author} category={obj.category} cover={obj.cover} remove={remove_book}></BookModel>;

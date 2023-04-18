@@ -11,7 +11,7 @@ const CartPage = () => {
   return (
     <section className="container-fluid cart-page">
       <section className="books-table">
-        <section className="books-table-header mb-2">
+        <section className="books-table-header text-lightblue mb-2">
           <p>Book</p>
           <p>Details</p>
         </section>

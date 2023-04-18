@@ -35,7 +35,7 @@ const Footer = () => {
         </section>
       </section>
 
-      <section className="text-center text-gold p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
+      <section className="text-center text-lightblue p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
         &copy;Copyright 2022/2023 LSP library
       </section>
     </footer>

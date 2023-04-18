@@ -11,6 +11,7 @@ import CreateBook from "./components/CreateBook/CreateBook";
 import UpdateBook from "./components/UpdateBook/UpdateBook";
 import UsersAccount from "./components/UsersAccount/UsersAccount";
 import BorrowRequests from "./components/BorrowRequests/BorrowRequests";
+import BookDetail from "./components/BookDetail/BookDetail";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/pages/home",
         element: <HomePage />,
+      },
+      {
+        path: "/pages/home/book/:id",
+        element: <BookDetail />,
       },
       {
         path: "/pages/cart",

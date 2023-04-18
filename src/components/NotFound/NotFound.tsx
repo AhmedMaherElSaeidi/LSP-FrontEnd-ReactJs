@@ -1,8 +1,17 @@
+import web_img from "../../assets/images/LSPWebLogo.png";
+import { Link } from "react-router-dom";
+import { BiHomeAlt } from "react-icons/bi";
 import "./NotFound.css";
 
 const NotFound = () => {
   return (
     <section className="not-found-page">
+      <section className="website-logo">
+        <Link to="/pages/home">
+          <img src={web_img} alt="Website_logo" />
+          <BiHomeAlt /> Return Home
+        </Link>
+      </section>
       <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 355">
           <g id="ocean">

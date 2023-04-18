@@ -21,7 +21,7 @@ const FormBox = ({ children, bgkclass, formWidth, formHeader, formAction = "", f
       </section>
       <section className="formbox-body">
         <form className={formWidth} action={formAction} method={formMethod}>
-          <section className="mb-4 text-gold text-center fw-bold fs-2">
+          <section className="mb-4 text-lightblue  text-center fw-bold fs-2">
             <HiLibrary /> {formHeader}
           </section>
           {children}

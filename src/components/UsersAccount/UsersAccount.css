@@ -1,10 +1,6 @@
 /* TABLE STRUCTURE */
-.content-table {
-    margin: 1em auto;
-}
 .content-table>table {
     width: 100%;
-    margin: 0em auto;
     overflow: hidden;
     border-radius: 0.15em;
     background-color: white;
@@ -43,22 +39,6 @@
 .borrow-limit-col>.limit-input>input:focus {
     color: gainsboro;
     box-shadow: none !important;
-}
-
-@keyframes slideDownIn {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0%;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-    0% {
-        transform: translateY(-20px);
-        opacity: 0%;
-    }
 }
 
 @media screen and (max-width: 960px) {

@@ -12,13 +12,13 @@ const BookCart = ({ isbn, title, author, cover, remove }: BookCartProps) => {
   return (
     <section className="book-cart">
       <img src={cover} alt="Book_Cover" />
-      <section className="cart-cover text-gold">
+      <section className="cart-cover text-lightblue">
         <h5 className="mb-1">{title}</h5>
         <h6 className="cart-title mb-0">{author}</h6>
       </section>
       <section className="cart-content">
         <section>
-          <span className="trash-icon text-gold" title="Return book" onClick={() => remove(isbn)}>
+          <span className="trash-icon text-lightblue" title="Return book" onClick={() => remove(isbn)}>
             <BsTrashFill />
           </span>
         </section>

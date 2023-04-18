@@ -33,14 +33,14 @@ const RegisterPage = () => {
       </FormInput>
       <FormRadio radioInputs={gender}></FormRadio>
       <section className="d-grid gap-2 col-6 mx-auto">
-        <button type="submit" name="submit" className="btn btn-outline-warning">
+        <button type="submit" name="submit" className="btn btn-outline-success">
           Submit
         </button>
         <section className="form-check form-check-inline">
           <input className="form-check-input" type="Checkbox" required />
-          <label className="form-check-label text-gold small-text"> I agree with terms and conditions </label>
+          <label className="form-check-label text-lightblue  small-text"> I agree with terms and conditions </label>
         </section>
-        <Link className="text-gold small-text text-center" to="/authenication/login">Already have account? login</Link>
+        <Link className="text-lightblue small-text text-center" to="/authenication/login">Already have account? login</Link>
       </section>
     </FormBox>
   );

@@ -4,7 +4,6 @@
         url(/src/assets/images/CartBKG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(95%);
     min-height: 100vh;
 }
 
@@ -16,9 +15,8 @@
 .books-table>.books-table-header {
     display: flex;
     margin: .25em 0em;
-    color: goldenrod;
     justify-content: space-around;
-    border-bottom: 0.25em solid goldenrod;
+    border-bottom: 0.25em solid #29b0d2;
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
 }

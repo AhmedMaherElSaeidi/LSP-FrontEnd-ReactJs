@@ -1,6 +1,5 @@
 .home-page {
-    background-image: linear-gradient(#ffffffd6, #ffffffd6),
-        url(/src/assets/images/HomeBKG.jpg);
+    background-image: radial-gradient(#6e6e6ea7, #6e6e6ea7), url(/src/assets/images/HomeBKG.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -6,9 +6,9 @@ const OptionsPage = () => {
     <section className="options-page">
       <aside className="options-aside-bar">
         <ul>
-          <li><Link to="/pages/options/create-book">Add Book</Link></li>
-          <li><Link to="/pages/options/user-accounts">Users Account</Link></li>
-          <li><Link to="/pages/options/borrow-requests">Borrow Request</Link></li>
+          <Link to="/pages/options/create-book"><li>Add Book</li></Link>
+          <Link to="/pages/options/user-accounts"><li>Users Account</li></Link>
+          <Link to="/pages/options/borrow-requests"><li>Borrow Request</li></Link>
         </ul>
       </aside>
       <section className="options-page-body">

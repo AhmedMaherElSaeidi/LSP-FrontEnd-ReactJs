@@ -1,5 +1,7 @@
 .options-page {
     display: flex;
+    min-height: 100vh;
+    background-color: white;
 }
 
 /* ASIDE BAR */
@@ -7,7 +9,7 @@
     width: 15em;
     height: 100vh;
     position: static;
-    background-color: #212529;
+    background-color: #073642;
 }
 
 .options-aside-bar>ul {
@@ -16,7 +18,7 @@
     list-style: none;
 }
 
-.options-aside-bar>ul>li {
+.options-aside-bar>ul li {
     display: flex;
     align-items: center;
     font-size: 1.1em;
@@ -24,28 +26,28 @@
     color: white;
     font-weight: bold;
     padding: 0em 1em;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white !important;
 }
 
-.options-aside-bar>ul>li:last-child {
+.options-aside-bar>ul li:last-child {
     border-bottom: none;
 }
 
-.options-aside-bar>ul>li:hover {
+.options-aside-bar>ul li:hover {
     cursor: pointer;
-    background-color: goldenrod;
+    background-color: #2f6c7c;
 }
 
-.options-aside-bar>ul>li>a {
+.options-aside-bar>ul>a {
     color: white !important;
 }
 
 /* PAGE CONTENT */
 .options-page-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    display: flex;
+    padding: 2em 0em;
+    justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -54,23 +56,49 @@
     }
 
     .options-aside-bar {
-        width: 100%;
         height: initial;
-        margin-bottom: 1em;
+        margin: 1em auto;
+        width: fit-content;
+        background-color: unset;
+        border-top: 2px solid white;
     }
 
     .options-aside-bar>ul {
         display: flex;
-        width: initial;
+        width: fit-content;
         margin-bottom: 0em;
     }
-
-    .options-aside-bar>ul>li {
+    
+    .options-aside-bar>ul li {
         padding: .45em !important;
     }
+    
+    .options-aside-bar>ul li {
+        border-bottom: unset !important;
+    }
+    
+    .options-aside-bar>ul a {
+        overflow: hidden;
+        border-radius: .3em;
+        background-color: #073642;
+        border-top-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        border: 2px solid white !important;
+    }
+}
 
-    .options-aside-bar>ul>li:not(:last-child) {
-        border-right: 1px solid white;
-        border-bottom: none;
+@keyframes slideDownIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+    0% {
+        transform: translateY(-20px);
+        opacity: 0%;
     }
 }

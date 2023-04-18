@@ -1,29 +1,40 @@
 .book-creation {
     width: 40em;
     padding: .5em;
-    margin: 1em auto;
     overflow: hidden;
+    height: fit-content;
     border-radius: .25em;
-    background-color: #a1a1a1ba;
+    background-color: #07364287;
+    -webkit-animation: slideDownIn 0.5s linear both;
+    animation: slideDownIn 0.5s linear both;
 }
 
 .book-creation>.book-creation-heading {
+    padding: .45em;
+    font-size: 2em;
+    color: white;
     font-weight: bold;
-    letter-spacing: .15em;
     text-align: center;
+    letter-spacing: .15em;
 }
 
 .book-creation>.book-creation-body {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* RIGHT SECTION */
+.book-creation .book-form-input>input,
+.book-creation .book-form-select>select {
+    background-color: white;
+}
+
 .form-control:focus,
 .form-select:focus,
 .book-creation .bk-right-panel .book-form-input>input:focus,
 .book-creation .bk-right-panel .book-form-select>select:focus {
     box-shadow: none !important;
+    background-color: white;
 }
 
 /* LEFT SECTION */
@@ -31,12 +42,14 @@
     height: 18em;
     width: 12em;
     border-radius: .15em;
+    border: 2px solid #aeefff87;
 }
 
 @media screen and (max-width: 720px) {
     .book-creation {
         width: 20em;
     }
+
     .book-creation>.book-creation-body {
         align-items: center;
         flex-direction: column;
@@ -46,6 +59,7 @@
     .book-creation .bk-left-panel {
         order: -1;
     }
+
     .book-creation .bk-left-panel>img {
         height: 15em;
         width: 15em;

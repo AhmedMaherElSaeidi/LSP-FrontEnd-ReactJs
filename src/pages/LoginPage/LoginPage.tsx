@@ -23,10 +23,10 @@ const LoginPage = () => {
         </span>
       </FormInput>
       <section className="d-grid gap-2 col-6 mx-auto">
-        <button type="submit" name="submit" className="btn btn-outline-warning">
+        <button type="submit" name="submit" className="btn btn-outline-success">
           Sign In
         </button>
-        <Link className="text-gold text-center small-text" to="/authenication/register">
+        <Link className="text-lightblue text-center small-text" to="/authenication/register">
           Register? I don't have account
         </Link>
       </section>

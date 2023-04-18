@@ -12,7 +12,7 @@ const FormRadio = ({ radioInputs }: FormRadioProps) => {
         return (
           <section className="form-check" key={index}>
             <input className="form-check-input" type="radio" name="gender" value={value} />
-            <label className="form-check-label text-gold">{display_value}</label>
+            <label className="form-check-label text-lightblue">{display_value}</label>
           </section>
         );
       })}

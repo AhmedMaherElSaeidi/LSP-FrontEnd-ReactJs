@@ -1,0 +1,82 @@
+.Book-detail-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #4F55C9, #8F94FB);
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-card {
+    width: 80%;
+    padding: .5em;
+    margin: 2em 0em;
+    height: fit-content;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1050609c;
+}
+
+/* CARD IMAGE */
+.horizontal-card>.card-cover>img {
+    width: 18em;
+    height: 23em;
+    border-radius: .25em;
+    border: 1.5px solid #29b0d2;
+}
+
+/* CARD DETAILS */
+.horizontal-card>.card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+.horizontal-card>.card-details>.card-details-bottom-border {
+    border-bottom: 0.25em solid #29b0d2;
+    border-bottom-right-radius: 2em;
+}
+
+.card-details .card-btn {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-details .card-btn>span:not(:last-child) {
+    margin-right: .3em;
+    margin-bottom: .3em;
+}
+
+@media screen and (max-width: 1200px) {
+    .horizontal-card {
+        width: 90%;
+    }
+
+    .horizontal-card>.card-cover>img {
+        width: 15em;
+        height: 20em;
+    }
+
+    .horizontal-card>.card-details {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .horizontal-card {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .horizontal-card>.card-cover {
+        display: flex;
+        justify-content: center;
+        margin-bottom: .5em;
+        border-bottom: 1px solid white;
+    }
+
+    .horizontal-card>.card-cover>img {
+        width: 15em;
+        height: 20em;
+        margin-bottom: .5em;
+    }
+}

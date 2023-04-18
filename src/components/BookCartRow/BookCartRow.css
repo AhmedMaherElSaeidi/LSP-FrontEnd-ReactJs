@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #624a2eb3;
+    background-color: #07364287;
     border-radius: 0.5em;
     overflow: hidden;
     padding: 1em 0em;
@@ -17,7 +17,7 @@
 }
 
 .cart-row>.book-details>.book-details-bottom-border {
-    border-bottom: 0.25em solid orangered;
+    border-bottom: 0.25em solid #29b0d2;
     border-bottom-right-radius: 2em;
 }
 
