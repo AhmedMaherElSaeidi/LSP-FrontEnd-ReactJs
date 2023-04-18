@@ -32,14 +32,8 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker, r
           <p className="model-text">Rack {rackNumber}</p>
         </section>
         <section className="model-content-icons text-lightblue">
-          {/* 
-          <HiBan className="fs-3 content-icon" title="Not Available" />
-        <MdDoneAll className="fs-3 content-icon" title="In Cart" /> */}
           <Link className="text-lightblue content-icon" to={"/pages/home/book/" + isbn}>
-            <SiAddthis className="fs-3" title="Add Book" />
-          </Link>
-          <Link className="text-lightblue content-icon" to={"/pages/home/book/" + isbn}>
-            <VscOpenPreview className="fs-3" title="View book" />
+            <VscOpenPreview className="fs-2" title="View book" />
           </Link>
         </section>
       </section>
