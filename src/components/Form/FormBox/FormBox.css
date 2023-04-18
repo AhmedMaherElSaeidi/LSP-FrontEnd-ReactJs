@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.formbox-header>.library-logo {
+.formbox-header .library-logo {
     width: 6em;
     height: 6em;
     margin-right: .5em;
@@ -30,14 +30,14 @@ a:hover {
     color: goldenrod !important;
 }
 
-.form-check-input:checked {
+.formbox-body .form-check-input:checked {
     background-color: gold !important;
     border-color: gold !important;
 }
 
-.form-control:focus,
-.form-select:focus,
-.form-check-input:focus,
-.form-check-select:focus {
+.formbox-body .form-control:focus,
+.formbox-body .form-select:focus,
+.formbox-body .form-check-input:focus,
+.formbox-body .form-check-select:focus {
     box-shadow: 0 0 0 0.25rem rgb(253 210 0 / 25%) !important;
 }

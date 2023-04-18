@@ -2,6 +2,7 @@ import WebsiteLogo from "../../../assets/images/LSPWebLogo.png";
 import { HiLibrary } from "react-icons/hi";
 import { ReactNode } from "react";
 import "./FormBox.css";
+import { Link } from "react-router-dom";
 
 interface FormBoxProps {
   children: ReactNode;
@@ -16,7 +17,7 @@ const FormBox = ({ children, bgkclass, formWidth, formHeader, formAction = "", f
   return (
     <section className={"container-fluid " + bgkclass}>
       <section className="formbox-header">
-        <img className="library-logo" src={WebsiteLogo} alt="Website_Logo" />
+        <Link to="/pages/home"><img className="library-logo" src={WebsiteLogo} alt="Website_Logo" /></Link>        
       </section>
       <section className="formbox-body">
         <form className={formWidth} action={formAction} method={formMethod}>

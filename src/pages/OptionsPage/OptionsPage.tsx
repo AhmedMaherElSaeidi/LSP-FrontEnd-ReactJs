@@ -1,7 +1,4 @@
-import BorrowRequests from "../../components/BorrowRequests/BorrowRequests";
-import CreateBook from "../../components/CreateBook/CreateBook";
-import UpdateBook from "../../components/UpdateBook/UpdateBook";
-import UsersAccount from "../../components/UsersAccount/UsersAccount";
+import { Link, Outlet } from "react-router-dom";
 import './OptionsPage.css'
 
 const OptionsPage = () => {
@@ -9,16 +6,13 @@ const OptionsPage = () => {
     <section className="options-page">
       <aside className="options-aside-bar">
         <ul>
-          <li className="active-selection">Add Book</li>
-          <li>Users Account</li>
-          <li>Borrow Request</li>
+          <li><Link to="/pages/options/create-book">Add Book</Link></li>
+          <li><Link to="/pages/options/user-accounts">Users Account</Link></li>
+          <li><Link to="/pages/options/borrow-requests">Borrow Request</Link></li>
         </ul>
       </aside>
       <section className="options-page-body">
-        <CreateBook />
-        {/* <UsersAccount/> */}
-        {/* <BorrowRequests/> */}
-        {/* <UpdateBook boookid={2}/> */}
+        <Outlet/>
       </section>
     </section>
   );

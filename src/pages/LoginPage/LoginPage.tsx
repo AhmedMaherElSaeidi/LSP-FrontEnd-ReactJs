@@ -6,6 +6,7 @@ import { HiLockClosed, HiUser } from "react-icons/hi";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { BsEyeFill } from "react-icons/bs";
 import "./LoginPage.css";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [isVisible, setisVisiblity] = useState(false);
@@ -25,9 +26,9 @@ const LoginPage = () => {
         <button type="submit" name="submit" className="btn btn-outline-warning">
           Sign In
         </button>
-        <a className="text-gold text-center small-text" href="#">
+        <Link className="text-gold text-center small-text" to="/authenication/register">
           Register? I don't have account
-        </a>
+        </Link>
       </section>
     </FormBox>
   );

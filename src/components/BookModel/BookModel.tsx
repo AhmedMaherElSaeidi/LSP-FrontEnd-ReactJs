@@ -2,6 +2,7 @@ import { BsTrashFill } from "react-icons/bs";
 import { SiAddthis } from "react-icons/si";
 import { FiEdit } from "react-icons/fi";
 import "./BookModel.css";
+import { Link } from "react-router-dom";
 
 interface BookModelProps {
   isbn: string;
@@ -30,7 +31,7 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker, r
         </section>
       </section>
       <span className="edit-icon text-gold">
-        <FiEdit />
+        <Link to={"/pages/options/update-book/"+ isbn}><FiEdit /></Link>
       </span>
       <span className="trash-icon text-gold">
         <BsTrashFill onClick={() => remove(isbn)}/>

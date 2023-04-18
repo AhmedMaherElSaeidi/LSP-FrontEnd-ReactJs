@@ -7,6 +7,7 @@ import { MdDriveFileRenameOutline, MdEmail, MdLock, MdPhone } from "react-icons/
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { BsEyeFill } from "react-icons/bs";
 import "./RegisterPage.css";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const [isVisible, setisVisiblity] = useState(false);
@@ -39,7 +40,7 @@ const RegisterPage = () => {
           <input className="form-check-input" type="Checkbox" required />
           <label className="form-check-label text-gold small-text"> I agree with terms and conditions </label>
         </section>
-        <a className="text-gold small-text text-center">Already have account? Register</a>
+        <Link className="text-gold small-text text-center" to="/authenication/login">Already have account? login</Link>
       </section>
     </FormBox>
   );

@@ -5,9 +5,10 @@ interface FormSelectProps {
   selectValue?: string;
   selectClass?: string;
   selectOPtions?: any[];
+  selectDefaultUI?: boolean;
   selectMethod?: (value: string) => void;
 }
-const FormSelect = ({ selectName, selectValue, selectClass, selectOPtions, selectMethod }: FormSelectProps) => {
+const FormSelect = ({ selectName, selectValue, selectClass, selectOPtions, selectDefaultUI = true,  selectMethod }: FormSelectProps) => {
   const [value, setValue] = useState(selectValue);
   const sendData = (value: string) => {
     setValue(value);
@@ -16,7 +17,7 @@ const FormSelect = ({ selectName, selectValue, selectClass, selectOPtions, selec
 
   return (
     <section className={selectClass}>
-      <select className="form-select" name={selectName} onChange={(event) => sendData(event.target.value)} required>
+      <select className={selectDefaultUI?"form-select":""} name={selectName} onChange={(event) => sendData(event.target.value)} required>
         {selectValue && (
           <option defaultValue={selectValue.toLowerCase()}>
             {selectValue}

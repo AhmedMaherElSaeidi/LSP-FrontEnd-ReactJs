@@ -1,6 +1,6 @@
 const data: any[] = [
   {
-    isbn: 1,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -9,7 +9,7 @@ const data: any[] = [
     booked: true,
   },
   {
-    isbn: 2,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -18,7 +18,7 @@ const data: any[] = [
     booked: true,
   },
   {
-    isbn: 3,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -27,7 +27,7 @@ const data: any[] = [
     booked: false,
   },
   {
-    isbn: 4,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -36,7 +36,7 @@ const data: any[] = [
     booked: false,
   },
   {
-    isbn: 5,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -45,7 +45,7 @@ const data: any[] = [
     booked: false,
   },
   {
-    isbn: 6,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -54,7 +54,7 @@ const data: any[] = [
     booked: true,
   },
   {
-    isbn: 7,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -63,7 +63,7 @@ const data: any[] = [
     booked: false,
   },
   {
-    isbn: 8,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -72,7 +72,7 @@ const data: any[] = [
     booked: true,
   },
   {
-    isbn: 9,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",
@@ -81,7 +81,7 @@ const data: any[] = [
     booked: false,
   },
   {
-    isbn: 10,
+    isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
     author: "Unknown",

@@ -12,6 +12,10 @@
     box-shadow: none !important;
 }
 
+.book-edit .book-input>select:focus {
+    cursor: pointer;
+}
+
 /* BOOK LEFT COVER */
 .book-edit .book-lcover {
     position: relative;
@@ -53,6 +57,15 @@
     top: 82%;
 }
 
+.book-edit .book-lcover>.category-select-lcover>select {
+    border: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    text-indent: 1px;
+    outline: none !important;
+    padding: 0.35em 0.68201em;
+}
+
 /* BOOK RIGHT CONTENT */
 .book-edit .book-rcontent {
     padding: 1em;
@@ -80,6 +93,7 @@
     .book-edit {
         width: 18em;
     }
+
     .book-edit>form {
         flex-direction: column;
     }
