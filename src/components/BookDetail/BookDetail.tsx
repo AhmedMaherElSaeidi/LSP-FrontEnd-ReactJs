@@ -1,8 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import data from "../../core/services";
-import BookCart from "../BookCart/BookCart";
-import "./BookDetail.css";
 import { RxDotFilled } from "react-icons/rx";
+import data from "../../core/services";
+import "./BookDetail.css";
 
 const BookDetail = () => {
   let { id } = useParams();

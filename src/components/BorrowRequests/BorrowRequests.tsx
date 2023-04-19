@@ -1,12 +1,13 @@
 import InsufficientView from "../InsufficientView/InsufficientView";
 import FormInput from "../Form/FormInput/FormInput";
 import { borrow } from "../../core/services";
-import { FcAcceptDatabase } from "react-icons/fc";
 import { FaBan } from "react-icons/fa";
+import { MdChangeCircle } from "react-icons/md";
+import { FcAcceptDatabase } from "react-icons/fc";
 import "./BorrowRequests.css";
 
 const BorrowRequests = () => {
-  const method = (value: string) => console.log(value);
+  const update = (key: string, value: string) => console.log(key, value);
 
   return (
     <section className="content-table">
@@ -27,8 +28,12 @@ const BorrowRequests = () => {
               <tr key={index}>
                 <td>{obj.isbn}</td>
                 <td>{obj.email}</td>
-                <td className="due-date-col">
-                  <FormInput inputType="date" inputName="dueDate" inputMethod={method} inputValue={obj.borrowLimit} inputClass="limit-input" inputPlaceHolder="Return Date" />
+                <td>
+                  <FormInput inputType="date" inputMethod={(v: any) => update("return-date", v.input)} inputValue={obj.dueDate}>
+                    <button type="submit" className="icon-button">
+                      <MdChangeCircle />
+                    </button>
+                  </FormInput>
                 </td>
                 <td>{obj.status}</td>
                 <td>
@@ -50,7 +55,7 @@ const BorrowRequests = () => {
           })}
         </tbody>
       </table>
-      <InsufficientView/>
+      <InsufficientView />
     </section>
   );
 };

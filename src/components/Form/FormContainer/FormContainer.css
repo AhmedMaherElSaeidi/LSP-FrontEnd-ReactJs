@@ -40,8 +40,7 @@
 
 .form-container-body .form-control:focus,
 .form-container-body .form-select:focus,
-.form-container-body .form-check-input:focus,
-.form-container-body .form-check-select:focus {
+.form-container-body .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem #aeefff87 !important;
     background-color: white;
 }

@@ -1,26 +1,28 @@
-input {
-    text-align: center;
+.input-control-form {
+    display: flex;
+    align-items: center;
 }
 
-.form-control-div {
-    position: relative;
+.input-control-form input {
+    border: unset;
+    color: white;
+    text-align: start;
+    background-color: transparent;
 }
 
-.form-control-div>.form-control-icon {
-    position: absolute;
-    top: 25%;
-    left: .5em;
+.input-control-form input:focus,
+.input-control-form input:focus-visible {
+    color: white;
+    border: unset;
+    box-shadow: unset;
+    background-color: transparent;
 }
 
-.password-eye-icon {
-    opacity: 40%;
-    position: absolute;
-    top: .25em;
-    right: .5em;
+.input-control-form .form-control-input {
+    margin-right: .35em;
 }
 
-.password-eye-icon:hover {
-    cursor: pointer;
-    color: black !important;
-    opacity: 100%;
+.input-control-form .form-control-submit > button {
+    border: unset;
+    background: transparent;
 }

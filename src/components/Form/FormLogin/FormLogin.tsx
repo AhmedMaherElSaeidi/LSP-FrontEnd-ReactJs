@@ -38,7 +38,7 @@ const FormLogin = () => {
       {errors.password && <span className="text-danger">This field is required and must be a valid password</span>}
 
       <section className="form-control-submit col-6">
-        <button type="submit" className="btn btn-outline-success">
+        <button type="submit" className="btn btn-outline-success mb-1">
           Sign In
         </button>
         <Link className="text-lightblue text-center small-text" to="/authenication/register">

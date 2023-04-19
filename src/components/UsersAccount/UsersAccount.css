@@ -22,25 +22,6 @@
     color: gray;
 }
 
-/* LIMIT INPUT COL */
-.borrow-limit-col {
-    display: flex;
-    align-items: center;
-}
-
-.borrow-limit-col>.limit-input>input {
-    background-color: transparent !important;
-    border: none;
-    width: 10em;
-    text-align: start;
-    color: white;
-}
-
-.borrow-limit-col>.limit-input>input:focus {
-    color: gainsboro;
-    box-shadow: none !important;
-}
-
 @media screen and (max-width: 960px) {
     .content-table>table {
         display: none;

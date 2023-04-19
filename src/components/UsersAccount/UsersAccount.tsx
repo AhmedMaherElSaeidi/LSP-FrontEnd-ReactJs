@@ -7,7 +7,7 @@ import { FaBan } from "react-icons/fa";
 import "./UsersAccount.css";
 
 const UsersAccount = () => {
-  const method = (value: string) => console.log(value);
+  const update = (key: string, value: string) => console.log(key, value);
   return (
     <section className="content-table">
       <table className="table table-hover table-dark caption-top">
@@ -30,11 +30,12 @@ const UsersAccount = () => {
                 <td>{obj.email}</td>
                 <td>{obj.phone}</td>
                 <td>{obj.status}</td>
-                <td className="borrow-limit-col">
-                  <FormInput inputType="text" inputName="limit" inputMethod={method} inputValue={obj.borrowLimit} inputClass="limit-input" />
-                  <span className="icon-button">
-                    <MdChangeCircle />
-                  </span>
+                <td>
+                  <FormInput inputType="number" inputMethod={(v: any) => update("borrow_limit", v.input)} inputValue={obj.borrowLimit}>
+                    <button type="submit" className="icon-button">
+                      <MdChangeCircle />
+                    </button>
+                  </FormInput>
                 </td>
                 <td>
                   <section className="d-flex align-items-center">
@@ -54,7 +55,7 @@ const UsersAccount = () => {
           })}
         </tbody>
       </table>
-      <InsufficientView/>
+      <InsufficientView />
     </section>
   );
 };
