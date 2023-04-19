@@ -40,7 +40,6 @@ const HomePage = () => {
 
   useEffect(() => {
     const category = searchParams.get("category");
-    console.log(category);
 
     setContent(filter(category!, "category"));
   }, [searchParams.get("category")]);
