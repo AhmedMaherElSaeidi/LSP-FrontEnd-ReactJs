@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { RxDotFilled } from "react-icons/rx";
+import {MdOutlineKeyboardReturn} from 'react-icons/md'
 import data from "../../core/services";
 import "./BookDetail.css";
 
@@ -29,7 +30,7 @@ const BookDetail = () => {
           <section className="card-btn">
             <span>
               <Link className="btn btn-info" to="/pages/home">
-                Return
+                <MdOutlineKeyboardReturn/> Return
               </Link>
             </span>
             <span className="btn btn-warning">Borrow</span>

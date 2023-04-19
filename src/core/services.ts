@@ -101,10 +101,10 @@ export const users: any[] = [
 ];
 
 export const borrow: any[] = [
-  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "booked" },
-  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "waiting" },
-  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "booked" },
-  { isbn: "person", email: "person@email.com", dueDate: "123456789", status: "waiting" },
+  { isbn: "person", email: "person@email.com", dueDate: "1234-07-05", status: "booked" },
+  { isbn: "person", email: "person@email.com", dueDate: "1234-12-25", status: "waiting" },
+  { isbn: "person", email: "person@email.com", dueDate: "1234-05-13", status: "booked" },
+  { isbn: "person", email: "person@email.com", dueDate: "1234-11-26", status: "waiting" },
 ];
 
 export const categories: string[] = ["Science Fiction", "Psychology", "Horror", "Novel"];

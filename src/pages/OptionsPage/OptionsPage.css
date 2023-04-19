@@ -6,14 +6,12 @@
 
 /* ASIDE BAR */
 .options-aside-bar {
-    width: 15em;
-    height: 100vh;
     position: static;
-    background-color: #073642;
+    background-color: #0a4351;
 }
 
 .options-aside-bar>ul {
-    width: 15em;
+    width: 10em;
     padding: 0px;
     list-style: none;
 }

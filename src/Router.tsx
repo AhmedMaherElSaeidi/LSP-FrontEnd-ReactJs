@@ -1,17 +1,25 @@
 import { createBrowserRouter } from "react-router-dom";
+
+// MAIN PAGES
 import Layout from "./layout/Layout";
-import Login from "./pages/LoginPage/LoginPage";
-import Register from "./pages/RegisterPage/RegisterPage";
 import CartPage from "./pages/CartPage/CartPage";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
-import NotFound from "./components/NotFound/NotFound";
+import BookDetail from "./components/BookDetail/BookDetail";
+
+// AUTHENICATION
+import Login from "./pages/LoginPage/LoginPage";
+import Register from "./pages/RegisterPage/RegisterPage";
+
+// OPTIONS PAGE COMPONENTS
 import OptionsPage from "./pages/OptionsPage/OptionsPage";
-import CreateBook from "./components/CreateBook/CreateBook";
-import UpdateBook from "./components/UpdateBook/UpdateBook";
+import BookCreate from "./components/BookCreate/BookCreate";
+import FormUpdateBook from "./components/Form/FormUpdateBook/FormUpdateBook";
 import UsersAccount from "./components/UsersAccount/UsersAccount";
 import BorrowRequests from "./components/BorrowRequests/BorrowRequests";
-import BookDetail from "./components/BookDetail/BookDetail";
+
+// 404 NOT FOUND PAGE
+import NotFound from "./components/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/test",
+        element: <></>,
       },
       {
         path: "/pages/home",
@@ -44,11 +56,11 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/pages/options/",
-            element: <CreateBook />,
+            element: <BookCreate />,
           },
           {
             path: "/pages/options/create-book",
-            element: <CreateBook />,
+            element: <BookCreate />,
           },
           {
             path: "/pages/options/user-accounts",
@@ -60,7 +72,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/pages/options/update-book/:id",
-            element: <UpdateBook />,
+            element: <FormUpdateBook />,
           },
         ],
       },
