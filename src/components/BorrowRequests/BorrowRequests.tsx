@@ -10,7 +10,7 @@ const BorrowRequests = () => {
   const update = (key: string, value: string) => console.log(key, value);
 
   return (
-    <section className="content-table">
+    <section className="borrow-rquests-component">
       <table className="table table-hover table-dark caption-top">
         <caption>Borrow Requests</caption>
         <thead>

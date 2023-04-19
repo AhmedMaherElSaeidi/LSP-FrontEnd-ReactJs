@@ -1,5 +1,5 @@
 /* TABLE STRUCTURE */
-.content-table>table {
+.users-account-component>table {
     width: 100%;
     overflow: hidden;
     border-radius: 0.15em;
@@ -8,22 +8,22 @@
     animation: slideDownIn 0.5s linear both;
 }
 
-.content-table>table>caption {
+.users-account-component>table>caption {
     font-weight: bold;
 }
 
-.icon-button {
+.users-account-component .icon-button {
     font-size: 1.4em;
     margin: 0em .35em;
 }
 
-.icon-button:hover {
+.users-account-component .icon-button:hover {
     cursor: pointer;
     color: gray;
 }
 
 @media screen and (max-width: 960px) {
-    .content-table>table {
+    .users-account-component>table {
         display: none;
     }
 }

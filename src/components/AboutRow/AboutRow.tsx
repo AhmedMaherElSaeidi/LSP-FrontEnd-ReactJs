@@ -7,7 +7,7 @@ interface AboutRowProps {
 }
 const AboutRow = ({ heading, children }: AboutRowProps) => {
   return (
-    <section>
+    <section className="about-row-component">
       <h2 className="text-wheat">{heading}</h2>
       <p className="about-p">{children}</p>
       <hr />

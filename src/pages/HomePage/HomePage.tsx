@@ -4,7 +4,6 @@ import FormFilter from "../../components/Form/FormFilter/FormFilter";
 import BookModel from "../../components/BookModel/BookModel";
 import books from "../../core/services";
 import "./HomePage.css";
-import { set } from "react-hook-form";
 
 const HomePage = () => {
   const [content, setContent] = useState(books);
@@ -25,12 +24,13 @@ const HomePage = () => {
     setContent(_books);
   };
 
-  const filter = (value: string, key: string) => {
+  const filter = (value: string, key: string):any[] => {
+    if(value == null) return books;
     return books.filter((book) => book[key] === value);
   };
 
   const reset_filteration = () => {
-    setContent(books);
+    setContent(filter(searchParams.get('category')!, 'category'));
   };
 
   const remove_book = (bookID: string) => {
@@ -40,18 +40,14 @@ const HomePage = () => {
 
   useEffect(() => {
     const category = searchParams.get("category");
+    console.log(category);
 
-    if (category == null) {
-      setContent(books);
-      return;
-    }
-
-    setContent(filter(category, "category"));
+    setContent(filter(category!, "category"));
   }, [searchParams.get("category")]);
 
   return (
     <section className="home-page">
-      <FormFilter submit={search} reset={()=> reset_filteration()} />
+      <FormFilter submit={search} reset={() => reset_filteration()}/>
       <section className="book-card-list">
         {content.map((obj, index) => {
           return <BookModel key={index} isbn={obj.isbn} rackNumber={obj.rackNumber} title={obj.title} author={obj.author} category={obj.category} cover={obj.cover} remove={remove_book}></BookModel>;

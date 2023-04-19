@@ -1,6 +1,5 @@
 /* TABLE STRUCTURE */
-
-.content-table>table {
+.borrow-rquests-component>table {
     width: 90%;
     overflow: hidden;
     border-radius: 0.15em;
@@ -9,27 +8,27 @@
     -webkit-animation: slideDownIn 0.5s linear both;
 }
 
-.content-table>table>caption {
+.borrow-rquests-component>table>caption {
     font-weight: bold;
 }
 
-.icon-button {
+.borrow-rquests-component .icon-button {
     font-size: 1.4em;
     margin: 0em .35em;
 }
 
-.icon-button:hover {
+.borrow-rquests-component .icon-button:hover {
     cursor: pointer;
     color: gray;
 }
 
 /* DUE DATE COL */
-.due-date-col {
+.borrow-rquests-component .due-date-col {
     display: flex;
     align-items: center;
 }
 
-.due-date-col>.limit-input>input {
+.borrow-rquests-component .due-date-col>.limit-input>input {
     background-color: transparent !important;
     border: none;
     width: 10em;
@@ -37,13 +36,13 @@
     color: white;
 }
 
-.due-date-col>.limit-input>input:focus {
+.borrow-rquests-component .due-date-col>.limit-input>input:focus {
     color: gainsboro;
     box-shadow: none !important;
 }
 
 @media screen and (max-width: 960px) {
-    .content-table>table {
+    .borrow-rquests-component>table {
         display: none;
     }
 }

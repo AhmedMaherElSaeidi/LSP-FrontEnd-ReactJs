@@ -10,7 +10,7 @@
   color: white;
 }
 
-.about-page {
+.about-page-container .about-page {
   margin: auto;
   background-color: #07364287;
   border-radius: 0.25em;
@@ -18,7 +18,7 @@
   width: 90%;
 }
 
-.about-page>.about-content {
+.about-page-container .about-page>.about-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,7 +26,7 @@
 }
 
 /* HEADING */
-.about-heading {
+.about-page-container .about-heading {
   font-size: 5em;
   text-align: center;
   font-weight: bold;
@@ -34,83 +34,83 @@
   margin: 0em;
 }
 
-.about-heading+p {
+.about-page-container .about-heading+p {
   text-align: center;
   font-weight: bold;
   letter-spacing: .35em;
   margin: 0em;
 }
 
-.about-p {
+.about-page-container .about-p {
   font-size: 1.1em;
 }
 
-.text-wheat {
+.about-page-container .text-wheat {
   color: #fff1d0;
 }
 
 /* ABOUT IMAGE */
-.about-content>.about-image {
+.about-page-container .about-content>.about-image {
   margin-left: 1.25em;
 }
 
-.about-content>.about-image>img {
+.about-page-container .about-content>.about-image>img {
   width: 25em;
   height: 40em;
   border-radius: 0.25em;
 }
 
 /* ABOUT TEXT */
-.about-content>.about-text {
+.about-page-container .about-content>.about-text {
   width: 60%;
 }
 
 @media screen and (max-width: 1200px) {
 
-  .about-page>.about-content {
+  .about-page-container .about-page>.about-content {
     justify-content: center !important;
   }
 
   /* ABOUT IMAGE */
-  .about-content>.about-image {
+  .about-page-container .about-content>.about-image {
     margin-top: 1em;
   }
 
-  .about-content>.about-image>img {
+  .about-page-container .about-content>.about-image>img {
     width: 20em;
     height: 20em;
   }
 
   /* ABOUT TEXT */
-  .about-content>.about-text {
+  .about-page-container .about-content>.about-text {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 560px) {
 
-  .about-page>.about-content {
+  .about-page-container .about-page>.about-content {
     justify-content: center !important;
   }
 
   /* HEADING */
-  .about-heading {
+  .about-page-container .about-heading {
     font-size: 2em;
   }
 
-  .about-heading+p {
+  .about-page-container .about-heading+p {
     text-align: center;
     font-weight: bold;
     letter-spacing: .35em;
     margin: 0em;
   }
 
-  .about-p {
+  .about-page-container .about-p {
     font-size: 1em;
   }
 
   /* ABOUT IMAGE */
-  .about-content>.about-image>img {
+  .about-page-container .about-content>.about-image>img {
     width: 12em;
     height: 12em;
   }

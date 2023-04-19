@@ -7,12 +7,12 @@
     min-height: 100vh;
 }
 
-.books-table {
+.cart-page .books-table {
     padding: 1em;
     overflow: hidden;
 }
 
-.books-table>.books-table-header {
+.cart-page .books-table>.books-table-header {
     display: flex;
     margin: .25em 0em;
     justify-content: space-around;
@@ -21,11 +21,11 @@
     border-bottom-right-radius: 0.25em;
 }
 
-.books-table>.books-table-header>p:nth-child(2) {
+.cart-page .books-table>.books-table-header>p:nth-child(2) {
     width: 70%;
 }
 
-.books-table>.books-table-header>p {
+.cart-page .books-table>.books-table-header>p {
     margin: 0em;
     padding-bottom: 0.5em;
     font-weight: bold;

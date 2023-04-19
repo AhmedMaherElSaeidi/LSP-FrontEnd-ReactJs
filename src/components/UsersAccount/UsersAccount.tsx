@@ -9,7 +9,7 @@ import "./UsersAccount.css";
 const UsersAccount = () => {
   const update = (key: string, value: string) => console.log(key, value);
   return (
-    <section className="content-table">
+    <section className="users-account-component">
       <table className="table table-hover table-dark caption-top">
         <caption>Users Account</caption>
         <thead>

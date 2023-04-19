@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { VscOpenPreview } from "react-icons/vsc";
 import { BsTrashFill } from "react-icons/bs";
-import { SiAddthis } from "react-icons/si";
-import { MdDoneAll } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
-import { HiBan } from "react-icons/hi";
 import "./BookModel.css";
 
 interface BookModelProps {
