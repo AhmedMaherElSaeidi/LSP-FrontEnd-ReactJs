@@ -114,9 +114,9 @@ const FormUpdateBook = () => {
           </section>
           <section>
             <section className="text-lightblue">
-              <section class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="show-input-check" onClick={(event) => setChecked(event.target.checked)} />
-                <label class="form-check-label" htmlFor="show-input-check">
+              <section className="form-check mb-2">
+                <input className="form-check-input" type="checkbox" id="show-input-check" onClick={(event) => setChecked(event.target.checked)} />
+                <label className="form-check-label" htmlFor="show-input-check">
                   Upload new cover?
                 </label>
               </section>

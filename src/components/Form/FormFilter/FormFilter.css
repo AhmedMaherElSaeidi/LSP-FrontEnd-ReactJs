@@ -1,0 +1,48 @@
+.form-filter .nav-link:hover,
+.form-filter .cursor-pnt:hover {
+    color: #0fbfeb !important;
+    cursor: pointer;
+}
+.form-filter .form-input-submit {
+    display: flex;
+    position: relative;
+}
+
+.form-filter .form-input-submit>input {
+    margin-right: .35em;
+}
+
+.form-filter .form-input-submit>.input-search-icon {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    opacity: 70%;
+}
+
+.form-filter .form-input-submit>.input-search-icon:hover {
+    opacity: 1;
+    color: #007393;
+    cursor: pointer;
+}
+
+.form-filter .form-checkbox-list {
+    margin-left: 1.5em;
+}
+
+.form-filter .form-check-input:checked {
+    background-color: #0fbfeb !important;
+    border-color: #0fbfeb !important;
+}
+
+.form-filter .form-control:focus,
+.form-filter .form-select:focus,
+.form-filter .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #aeefff87 !important;
+    background-color: white;
+}
+
+.form-filter .navbar-toggler:focus, 
+.form-filter .navbar-toggler:focus-within {
+    border: none;
+    box-shadow: 0 0 0 0.2rem #aeefff87 !important;
+} 

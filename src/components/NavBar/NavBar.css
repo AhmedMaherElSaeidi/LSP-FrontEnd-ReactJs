@@ -1,23 +1,19 @@
-.navbar-brand {
+nav .navbar-brand {
     padding: 0em !important;
 }
 
-.navbar-brand>img {
+nav .navbar-brand>img {
     width: 2.5em;
     height: 2.5em;
 }
 
-.dropdown-item:hover,
-.nav-link:hover {
+nav .dropdown-item:hover,
+nav .nav-link:hover {
     color: #00ccff !important;
 }
 
-.input-search {
-    position: relative;
-}
-
-.input-search>.input-search-icon {
-    position: absolute;
-    top: 25%;
-    left: .5em;
-}
+nav .navbar-toggler:focus, 
+nav .navbar-toggler:focus-within {
+    border: none;
+    box-shadow: 0 0 0 0.2rem #aeefff87 !important;
+} 

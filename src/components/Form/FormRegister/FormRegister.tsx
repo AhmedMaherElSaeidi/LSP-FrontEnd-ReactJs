@@ -42,7 +42,7 @@ const FormRegister = () => {
 
       <section className="form-control-input">
         <MdPhone className="form-control-icon" />
-        <input type="tel" id="phone" className="form-control" placeholder="+20112317152" {...register("phone", { required: true, pattern: /^[0-9]{10}$/i })} />
+        <input type="tel" id="phone" className="form-control" placeholder="(+20) 112-317-152" {...register("phone", { required: true, pattern: /^[0-9]{10}$/i })} />
       </section>
       {errors.phone && errors.phone.type === "required" && <span className="text-danger">This field is required</span>}
       {errors.phone && errors.phone.type === "pattern" && <span className="text-danger">This field must be a valid phone number</span>}

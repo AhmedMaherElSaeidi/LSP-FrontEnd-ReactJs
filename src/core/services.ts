@@ -12,7 +12,7 @@ const data: any[] = [
     isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
     title: "Book",
-    author: "Unknown",
+    author: "anthony",
     category: "Unkown",
     cover: "https://images.unsplash.com/photo-1681407979620-193f8181f5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
     booked: true,

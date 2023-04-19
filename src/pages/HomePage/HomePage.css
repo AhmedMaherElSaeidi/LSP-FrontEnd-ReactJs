@@ -6,9 +6,9 @@
     min-height: 100vh;
 }
 
-.book-card-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1em 0em;
+.book-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-auto-flow: dense;
+    padding: .75em 0em;
 }
