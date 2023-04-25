@@ -4,9 +4,13 @@ import { BiSearchAlt } from "react-icons/bi";
 import { TbZoomReset } from "react-icons/tb";
 import "./FormFilter.css";
 
-const FormFilter = ({ submit, reset }) => {
+interface FormFilterProps {
+  submit: (keys: string[], data: any) => void;
+  reset: () => void;
+}
+const FormFilter = ({ submit, reset }: FormFilterProps) => {
   const { register, handleSubmit  } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     const filter_keys = [...Object.keys(data)];
     submit(filter_keys, data);
   };

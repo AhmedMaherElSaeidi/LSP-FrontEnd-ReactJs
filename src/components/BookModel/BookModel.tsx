@@ -4,7 +4,17 @@ import { BsTrashFill } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
 import "./BookModel.css";
 
-const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove }) => {
+interface BookModelProps {
+  isbn: string;
+  rackNumber: number;
+  title: string;
+  author: string;
+  category: string;
+  cover: string;
+  booker?: object;
+  remove: (id: string) => void;
+}
+const BookModel = ({ isbn, rackNumber, title, author, category, cover, booker, remove }: BookModelProps) => {
   return (
     <section className="book-model">
       <img src={cover} alt="Book_Cover" />

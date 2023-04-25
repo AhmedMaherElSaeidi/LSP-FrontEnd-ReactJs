@@ -7,7 +7,7 @@ import { FaBan } from "react-icons/fa";
 import "./UsersAccount.css";
 
 const UsersAccount = () => {
-  const update = (key, value) => console.log(key, value);
+  const update = (key: string, value: string) => console.log(key, value);
   return (
     <section className="users-account-component">
       <table className="table table-hover table-dark caption-top">
@@ -31,7 +31,7 @@ const UsersAccount = () => {
                 <td>{obj.phone}</td>
                 <td>{obj.status}</td>
                 <td>
-                  <FormInput inputType="number" inputMethod={(v) => update("borrow_limit", v.input)} inputValue={obj.borrowLimit}>
+                  <FormInput inputType="number" inputMethod={(v: any) => update("borrow_limit", v.input)} inputValue={obj.borrowLimit}>
                     <button type="submit" className="icon-button">
                       <MdChangeCircle />
                     </button>

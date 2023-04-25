@@ -1,6 +1,11 @@
+import { ReactNode } from "react";
 import "./AboutRow.css";
 
-const AboutRow = ({ heading, children }) => {
+interface AboutRowProps {
+  heading: string;
+  children: ReactNode;
+}
+const AboutRow = ({ heading, children }: AboutRowProps) => {
   return (
     <section className="about-row-component">
       <h2 className="text-wheat">{heading}</h2>

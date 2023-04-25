@@ -1,4 +1,4 @@
-const data = [
+const data: any[] = [
   {
     isbn: Math.floor(Math.random() * 20212000 + 20211800),
     rackNumber: Math.floor(Math.random() * 5 + 1),
@@ -91,7 +91,7 @@ const data = [
   },
 ];
 
-export const users = [
+export const users: any[] = [
   { name: "person", email: "person@email.com", phone: "123456789", status: "active", borrowLimit: Math.floor(Math.random() * 10 + 1) },
   { name: "person", email: "person@email.com", phone: "123456789", status: "inactive", borrowLimit: Math.floor(Math.random() * 10 + 1) },
   { name: "person", email: "person@email.com", phone: "123456789", status: "active", borrowLimit: Math.floor(Math.random() * 10 + 1) },
@@ -100,12 +100,12 @@ export const users = [
   { name: "person", email: "person@email.com", phone: "123456789", status: "inactive", borrowLimit: Math.floor(Math.random() * 10 + 1) },
 ];
 
-export const borrow = [
+export const borrow: any[] = [
   { isbn: "person", email: "person@email.com", dueDate: "1234-07-05", status: "booked" },
   { isbn: "person", email: "person@email.com", dueDate: "1234-12-25", status: "waiting" },
   { isbn: "person", email: "person@email.com", dueDate: "1234-05-13", status: "booked" },
   { isbn: "person", email: "person@email.com", dueDate: "1234-11-26", status: "waiting" },
 ];
 
-export const categories = ["Science Fiction", "Psychology", "Horror", "Novel"];
+export const categories: string[] = ["Science Fiction", "Psychology", "Horror", "Novel"];
 export default data;

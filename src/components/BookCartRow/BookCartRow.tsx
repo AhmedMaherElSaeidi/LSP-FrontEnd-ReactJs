@@ -2,7 +2,18 @@ import { RxDotFilled } from "react-icons/rx";
 import BookCart from "../BookCart/BookCart";
 import "./BookCartRow.css"
 
-const BookCartRow = ({ isbn, rackNumber, title, author, category, cover, remove}) => {
+interface BookCartRowProps {
+    isbn: string;
+    rackNumber: number;
+    title: string;
+    author: string;
+    category: string;
+    cover: string;
+    booker?: object;
+    remove: (id:string) => void;
+}
+
+const BookCartRow = ({ isbn, rackNumber, title, author, category, cover, booker, remove}:BookCartRowProps) => {
   return (
     <section className="cart-row">
       <BookCart isbn={isbn} title={title} author={author} cover={cover} remove={remove}/>

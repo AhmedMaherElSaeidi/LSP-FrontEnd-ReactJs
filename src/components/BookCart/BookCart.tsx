@@ -1,7 +1,14 @@
 import { BsTrashFill } from "react-icons/bs";
 import "./BookCart.css";
 
-const BookCart = ({ isbn, title, author, cover, remove }) => {
+interface BookCartProps {
+  isbn: string;
+  cover: string;
+  title: string;
+  author: string;
+  remove: (id:string) => void;
+}
+const BookCart = ({ isbn, title, author, cover, remove }: BookCartProps) => {
   return (
     <section className="book-cart">
       <img src={cover} alt="Book_Cover" />

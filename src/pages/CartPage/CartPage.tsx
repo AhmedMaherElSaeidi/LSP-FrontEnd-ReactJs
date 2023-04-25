@@ -4,7 +4,7 @@ import "./CartPage.css";
 
 const CartPage = () => {
   const _data = data.slice(0, 3);
-  const remove_book = (bookID) => {
+  const remove_book = (bookID: string) => {
     const confirm = prompt("Do you wish to proceed?.");
     if (confirm) console.log(confirm);
   };

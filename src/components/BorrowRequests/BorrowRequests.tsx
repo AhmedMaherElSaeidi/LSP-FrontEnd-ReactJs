@@ -7,7 +7,7 @@ import { FcAcceptDatabase } from "react-icons/fc";
 import "./BorrowRequests.css";
 
 const BorrowRequests = () => {
-  const update = (key, value) => console.log(key, value);
+  const update = (key: string, value: string) => console.log(key, value);
 
   return (
     <section className="borrow-rquests-component">
@@ -29,7 +29,7 @@ const BorrowRequests = () => {
                 <td>{obj.isbn}</td>
                 <td>{obj.email}</td>
                 <td>
-                  <FormInput inputType="date" inputMethod={(v) => update("return-date", v.input)} inputValue={obj.dueDate}>
+                  <FormInput inputType="date" inputMethod={(v: any) => update("return-date", v.input)} inputValue={obj.dueDate}>
                     <button type="submit" className="icon-button">
                       <MdChangeCircle />
                     </button>
