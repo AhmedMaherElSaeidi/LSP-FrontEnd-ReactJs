@@ -1,15 +1,8 @@
-import { ReactNode, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./FormInput.css";
 
-interface FormInputProps {
-  children: ReactNode;
-  inputType: string;
-  inputValue?: string;
-  inputMethod: (value: any) => void;
-}
-
-const FormInput = ({ children, inputType, inputValue, inputMethod }: FormInputProps) => {
+const FormInput = ({ children, inputType, inputValue, inputMethod }) => {
   const [input, setInput] = useState(inputValue);
   const {
     register,
@@ -22,7 +15,7 @@ const FormInput = ({ children, inputType, inputValue, inputMethod }: FormInputPr
     setValue("input", inputValue);
   }, [setValue]);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data) => {
     if (input == data.input) return;
 
     setInput(data.input);

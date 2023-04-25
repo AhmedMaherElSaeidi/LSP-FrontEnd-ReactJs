@@ -27,7 +27,7 @@ const FormUpdateBook = () => {
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data) => {
     console.log(data);
   };
 
