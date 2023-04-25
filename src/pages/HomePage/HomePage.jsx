@@ -9,7 +9,7 @@ const HomePage = () => {
   const [content, setContent] = useState(books);
   const [searchParams] = useSearchParams();
 
-  const search = (keys: string[], data: any) => {
+  const search = (keys, data) => {
     const _search_value = data[keys[0]];
     const _search_indexes = keys.filter((key) => data[key] === true);
     let _books = [...content];
@@ -24,16 +24,16 @@ const HomePage = () => {
     setContent(_books);
   };
 
-  const filter = (value: string, key: string):any[] => {
+  const filter = (value, key) => {
     if(value == null) return books;
     return books.filter((book) => book[key] === value);
   };
 
   const reset_filteration = () => {
-    setContent(filter(searchParams.get('category')!, 'category'));
+    setContent(filter(searchParams.get('category'), 'category'));
   };
 
-  const remove_book = (bookID: string) => {
+  const remove_book = (bookID) => {
     const confirm = prompt("Do you wish to proceed?.");
     if (confirm) console.log(confirm);
   };
@@ -41,7 +41,7 @@ const HomePage = () => {
   useEffect(() => {
     const category = searchParams.get("category");
 
-    setContent(filter(category!, "category"));
+    setContent(filter(category, "category"));
   }, [searchParams.get("category")]);
 
   return (

@@ -1,14 +1,8 @@
 import WebsiteLogo from "../../../assets/images/LSPWebLogo.png";
 import { Link } from "react-router-dom";
-import { ReactNode } from "react";
 import "./FormContainer.css";
 
-interface FormContainerProps {
-  children: ReactNode;
-  parentClass: string;
-}
-
-const FormContainer = ({ children, parentClass}: FormContainerProps) => {
+const FormContainer = ({ children, parentClass}) => {
   return (
     <section className={"container-fluid " + parentClass}>
       <section className="form-container-header">
