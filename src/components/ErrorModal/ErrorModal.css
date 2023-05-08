@@ -1,22 +1,21 @@
 .err-modal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: absolute;
-    top: 30%;
-    left: 35%;
-    border-radius: 0.5em;
-    background-color: #ffecc9c4;
-    padding: 5em 10em;
-    color: red;
+    top: .5%;
+    left: .5%;
+}
+
+.err-modal-container>section:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.err-modal-container>section:last-child>svg {
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-.err-modal-container:hover {
+.err-modal-container>section:last-child:hover {
     cursor: pointer;
     opacity: 80%;
-}
-
-.err-modal-container svg {
-    font-size: 5em;
+    color: red;
 }

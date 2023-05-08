@@ -39,7 +39,7 @@ const FormLogin = () => {
         navigate("/pages/home");
       })
       .catch((err) => {
-        console.log(err.response.data.message);
+        // console.log(err.response.data.message);
         setLoginData({ err: err.response.data.message, loading: false });
       });
   };
@@ -75,7 +75,7 @@ const FormLogin = () => {
         </section>
       </form>
       {loginData.loading && <Spinner />}
-      {loginData.err && <ErrorModal close={(v) => setLoginData({ ...loginData, err: v })} />}
+      {loginData.err && <ErrorModal close={(v) => setLoginData({ ...loginData, err: false })} message={loginData.err} />}
     </>
   );
 };

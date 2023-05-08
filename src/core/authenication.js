@@ -13,7 +13,7 @@ export const getUser = () => jwt(getToken())
 export const isAuth = () => {
     const tkn = getToken()
     
-    if(Date.now > (getUser().exp * 1000)){
+    if(tkn && Date.now > (getUser().exp * 1000)){
         removeToken();
         return false;
     }

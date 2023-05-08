@@ -1,14 +1,15 @@
-import { RxCrossCircled } from "react-icons/rx";
+import { VscChromeClose } from "react-icons/vsc";
 import "./ErrorModal.css";
 
-const ErrorModal = ({ close }) => {
+const ErrorModal = ({ message, close }) => {
   return (
     <section className="err-modal-container" title="close" onClick={() => close(false)}>
-      <section>
-        <RxCrossCircled />
+      {message.map((msg, index) => (
+        <section key={index} className="alert alert-danger mb-2">{msg.msg}</section>
+      ))}
+      <section title="close" onClick={() => close(false)} className="alert alert-secondary">
+        <VscChromeClose />
       </section>
-      <section>Encountered error.</section>
-      <section className="text-small">Look at console for details.</section>
     </section>
   );
 };
