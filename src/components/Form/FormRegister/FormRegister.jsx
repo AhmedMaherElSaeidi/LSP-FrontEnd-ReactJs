@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../../../core/globals";
+import { SERVER_URL } from "../../../core/globals";
 
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -33,7 +33,7 @@ const FormRegister = () => {
 
   useEffect(() => {
     axios
-      .get(API_URL + "gender")
+      .get(SERVER_URL + "gender")
       .then((res) => {
         setRegisterData({ ...registerData, loading: false, gender: res.data });
       })
@@ -50,7 +50,7 @@ const FormRegister = () => {
     data["status"] = data.type == "normal" ? "inactive" : "active";
 
     axios
-      .post(API_URL + "auth/register", data)
+      .post(SERVER_URL + "auth/register", data)
       .then(() => {
         navigate("/authenication/login");
       })

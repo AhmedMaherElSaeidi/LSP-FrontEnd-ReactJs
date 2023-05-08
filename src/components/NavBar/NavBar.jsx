@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../../core/globals";
+import { SERVER_URL } from "../../core/globals";
 import { getUser, isAuth, removeToken } from "../../core/authenication";
 
 import { useEffect, useState } from "react";
@@ -26,7 +26,7 @@ const NavBar = () => {
 
   useEffect(() => {
     axios
-      .get(API_URL + "category")
+      .get(SERVER_URL + "category")
       .then((res) => {
         setCategories({ loaded: true, result: res.data });
       })
@@ -96,7 +96,7 @@ const NavBar = () => {
                 )}
               </ul>
             </li>
-            {isAuth() && (
+            {isAuth() && getUser().type == "normal" && (
               <li className="nav-item">
                 <Link className="nav-link" to="/pages/cart">
                   <BiCartAlt /> Cart

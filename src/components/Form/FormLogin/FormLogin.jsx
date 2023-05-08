@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../../../core/globals";
+import { SERVER_URL } from "../../../core/globals";
 import { setToken } from "../../../core/authenication";
 
 import { useState } from "react";
@@ -33,7 +33,7 @@ const FormLogin = () => {
   const onSubmit = (data) => {
     setLoginData({ ...loginData, loading: true });
     axios
-      .post(API_URL + "auth/login", data)
+      .post(SERVER_URL + "auth/login", data)
       .then((res) => {
         setToken(res.data.token);
         navigate("/pages/home");
