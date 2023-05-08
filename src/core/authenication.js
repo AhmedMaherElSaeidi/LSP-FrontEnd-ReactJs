@@ -11,9 +11,9 @@ export const getToken = () => localStorage.getItem(_token)
 export const getUser = () => jwt(getToken())
 
 export const isAuth = () => {
-    const tkn = getToken()
-    
-    if(tkn && Date.now > (getUser().exp * 1000)){
+    const timestamp = new Date()
+
+    if (getToken() && timestamp.getTime() >= (getUser().exp * 1000)) {
         removeToken();
         return false;
     }
