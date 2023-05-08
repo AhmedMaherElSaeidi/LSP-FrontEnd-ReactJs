@@ -18,16 +18,17 @@
     align-items: center;
 }
 
-.form-container-body > form {
+.form-container-body>form {
     background-color: #07364287;
     border-radius: 0.5em;
-    padding: 1.5em;    
+    padding: 1.5em;
     box-shadow: 0 0 0 0.1rem #aeefff87 !important;
 }
 
-.form-container-body > form input {
+.form-container-body>form input {
     background-color: white;
 }
+
 .form-container-body a:hover {
     text-decoration: none;
     opacity: 80%;

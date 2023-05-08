@@ -1,0 +1,22 @@
+.err-modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    border-radius: 0.5em;
+    background-color: #ffecc9c4;
+    padding: 5em 10em;
+    color: red;
+    font-weight: bold;
+}
+
+.err-modal-container:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.err-modal-container svg {
+    font-size: 5em;
+}
