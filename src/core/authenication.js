@@ -10,4 +10,13 @@ export const getToken = () => localStorage.getItem(_token)
 
 export const getUser = () => jwt(getToken())
 
-export const isAuth = () => getToken() != null && true
+export const isAuth = () => {
+    const tkn = getToken()
+    
+    if(Date.now > (getUser().exp * 1000)){
+        removeToken();
+        return false;
+    }
+
+    return getToken() != null && true
+}

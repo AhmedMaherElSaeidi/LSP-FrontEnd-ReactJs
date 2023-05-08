@@ -31,8 +31,6 @@ const FormLogin = () => {
   });
 
   const onSubmit = (data) => {
-    if (!formState.isValid) return;
-
     setLoginData({ ...loginData, loading: true });
     axios
       .post(API_URL + "auth/login", data)
@@ -42,7 +40,7 @@ const FormLogin = () => {
       })
       .catch((err) => {
         console.log(err.response.data.message);
-        setRegisterData({ err: err.response.data.message, loading: false });
+        setLoginData({ err: err.response.data.message, loading: false });
       });
   };
   return (
@@ -51,7 +49,7 @@ const FormLogin = () => {
         <section className="form-control-heading text-lightblue fs-2">
           <HiLibrary /> SignIn
         </section>
-        
+
         <section className="form-control-input">
           <HiUser className="form-control-icon" />
           <input type="email" id="email" className="form-control" placeholder="email@gmail.com" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })} />
