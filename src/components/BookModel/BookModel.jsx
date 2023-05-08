@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { VscOpenPreview } from "react-icons/vsc";
-import { BsTrashFill } from "react-icons/bs";
+import { getUser, isAuth } from "../../core/authenication";
+
 import { FiEdit } from "react-icons/fi";
+import { BsTrashFill } from "react-icons/bs";
+import { VscOpenPreview } from "react-icons/vsc";
+
 import "./BookModel.css";
 
 const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove }) => {
@@ -24,14 +27,18 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove })
           </Link>
         </section>
       </section>
-      <span className="edit-icon">
-        <Link className="text-lightblue" to={"/pages/options/update-book/" + isbn}>
-          <FiEdit />
-        </Link>
-      </span>
-      <span className="trash-icon text-lightblue">
-        <BsTrashFill onClick={() => remove(isbn)} />
-      </span>
+      {isAuth() && getUser().type == "librarian" && (
+        <>
+          <span className="edit-icon">
+            <Link className="text-lightblue" to={"/pages/options/update-book/" + isbn}>
+              <FiEdit />
+            </Link>
+          </span>
+          <span className="trash-icon text-lightblue">
+            <BsTrashFill onClick={() => remove(isbn)} />
+          </span>
+        </>
+      )}
     </section>
   );
 };

@@ -17,6 +17,7 @@ import BookCreate from "./components/BookCreate/BookCreate";
 import FormUpdateBook from "./components/Form/FormUpdateBook/FormUpdateBook";
 import UsersAccount from "./components/UsersAccount/UsersAccount";
 import BorrowRequests from "./components/BorrowRequests/BorrowRequests";
+import AuthGuard from "./guards/AuthGuard";
 
 // 404 NOT FOUND PAGE
 import NotFound from "./components/NotFound/NotFound";
@@ -31,10 +32,6 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/test",
-        element: <></>,
-      },
-      {
         path: "/pages/home",
         element: <HomePage />,
       },
@@ -43,48 +40,63 @@ const router = createBrowserRouter([
         element: <BookDetail />,
       },
       {
-        path: "/pages/cart",
-        element: <CartPage />,
+        element: <AuthGuard role="normal" />,
+        children: [
+          {
+            path: "/pages/cart",
+            element: <CartPage />,
+          },
+        ],
       },
       {
         path: "/pages/about",
         element: <AboutPage />,
       },
       {
-        path: "/pages/options",
-        element: <OptionsPage />,
+        element: <AuthGuard role="librarian" />,
         children: [
           {
-            path: "/pages/options/",
-            element: <BookCreate />,
-          },
-          {
-            path: "/pages/options/create-book",
-            element: <BookCreate />,
-          },
-          {
-            path: "/pages/options/user-accounts",
-            element: <UsersAccount />,
-          },
-          {
-            path: "/pages/options/borrow-requests",
-            element: <BorrowRequests />,
-          },
-          {
-            path: "/pages/options/update-book/:id",
-            element: <FormUpdateBook />,
+            path: "/pages/options",
+            element: <OptionsPage />,
+            children: [
+              {
+                path: "/pages/options/",
+                element: <BookCreate />,
+              },
+              {
+                path: "/pages/options/create-book",
+                element: <BookCreate />,
+              },
+              {
+                path: "/pages/options/user-accounts",
+                element: <UsersAccount />,
+              },
+              {
+                path: "/pages/options/borrow-requests",
+                element: <BorrowRequests />,
+              },
+              {
+                path: "/pages/options/update-book/:id",
+                element: <FormUpdateBook />,
+              },
+            ],
           },
         ],
       },
     ],
   },
   {
-    path: "/authenication/register",
-    element: <Register />,
-  },
-  {
-    path: "/authenication/login",
-    element: <Login />,
+    element: <AuthGuard auth={false} />,
+    children: [
+      {
+        path: "/authenication/register",
+        element: <Register />,
+      },
+      {
+        path: "/authenication/login",
+        element: <Login />,
+      },
+    ],
   },
   {
     path: "*",
