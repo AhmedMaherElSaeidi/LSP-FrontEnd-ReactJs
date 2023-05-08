@@ -38,7 +38,7 @@ const FormRegister = () => {
         setRegisterData({ ...registerData, loading: false, gender: res.data });
       })
       .catch((err) => {
-        console.log(err);
+        setRegisterData({ ...registerData, loading: false, err: err.response.data.message });
       });
   }, []);
 

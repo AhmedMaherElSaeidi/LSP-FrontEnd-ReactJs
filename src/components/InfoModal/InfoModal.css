@@ -1,0 +1,21 @@
+.info-modal-container {
+    position: absolute;
+    top: .5%;
+    right: .5%;
+}
+
+.info-modal-container>section:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.info-modal-container>section:last-child>svg {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.info-modal-container>section:last-child:hover {
+    cursor: pointer;
+    opacity: 80%;
+    color: red;
+}
