@@ -1,16 +1,24 @@
 import axios from "axios";
 import { API_URL } from "../../core/globals";
+import { getUser, isAuth, removeToken } from "../../core/authenication";
 
-import WebsiteLogo from "../../assets/images/LSPWebLogo.png";
-import { Link } from "react-router-dom";
-import { BiCategory, BiCartAlt, BiHomeAlt } from "react-icons/bi";
-import { IoReorderFour } from "react-icons/all";
-import { TiInfoLarge } from "react-icons/ti";
-import { CgOptions } from "react-icons/cg";
-import "./NavBar.css";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import { CgOptions } from "react-icons/cg";
+import { TiInfoLarge } from "react-icons/ti";
+import { IoReorderFour } from "react-icons/all";
+import { BiCategory, BiCartAlt, BiHomeAlt } from "react-icons/bi";
+
+import "./NavBar.css";
+import WebsiteLogo from "../../assets/images/LSPWebLogo.png";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const signout = () => {
+    removeToken();
+    navigate("/authenication/login");
+  };
   const [categories, setCategories] = useState({
     loaded: false,
     result: null,
@@ -65,33 +73,36 @@ const NavBar = () => {
                 <CgOptions /> Options
               </a>
               <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li>
-                  <Link className="dropdown-item" to="/pages/options">
-                    Settings
-                  </Link>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Sign Out
-                  </a>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/authenication/login">
-                    Sign In
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/authenication/register">
-                    Sign Up
-                  </Link>
-                </li>
+                {isAuth() && getUser().type == "librarian" && (
+                  <li>
+                    <Link className="dropdown-item" to="/pages/options">
+                      Settings
+                    </Link>
+                  </li>
+                )}
+                {isAuth() && (
+                  <li>
+                    <a className="dropdown-item" onClick={signout}>
+                      Sign Out
+                    </a>
+                  </li>
+                )}
+                {!isAuth() && (
+                  <li>
+                    <Link className="dropdown-item" to="/authenication/login">
+                      Sign In
+                    </Link>
+                  </li>
+                )}
               </ul>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/pages/cart">
-                <BiCartAlt /> Cart
-              </Link>
-            </li>
+            {isAuth() && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/pages/cart">
+                  <BiCartAlt /> Cart
+                </Link>
+              </li>
+            )}
             <li className="nav-item">
               <Link className="nav-link" to="/pages/about">
                 <TiInfoLarge /> AboutUs

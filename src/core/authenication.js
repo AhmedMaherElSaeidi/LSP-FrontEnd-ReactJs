@@ -1,13 +1,13 @@
 import jwt from "jwt-decode";
 
-export const setToken = (token) => {
-    localStorage.setItem("lsp_session_token", token)
-}
+const _token = "lsp_session_token"
 
-export const getToken = () => {
-    return localStorage.getItem("lsp_session_token")
-}
+export const setToken = (token) => localStorage.setItem(_token, token)
 
-export const getUser = () => {
-    return jwt(getToken())
-}
+export const removeToken = () => localStorage.removeItem(_token)
+
+export const getToken = () => localStorage.getItem(_token)
+
+export const getUser = () => jwt(getToken())
+
+export const isAuth = () => getToken() != null && true
