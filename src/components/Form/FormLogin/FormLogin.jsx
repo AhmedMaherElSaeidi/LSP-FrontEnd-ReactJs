@@ -75,7 +75,7 @@ const FormLogin = () => {
         </section>
       </form>
       {loginData.loading && <Spinner />}
-      {loginData.err && <ErrorModal close={(v) => setLoginData({ ...loginData, err: false })} message={loginData.err} />}
+      {loginData.err && <ErrorModal close={(v) => setLoginData({ ...loginData, err: v })} message={loginData.err} />}
     </>
   );
 };

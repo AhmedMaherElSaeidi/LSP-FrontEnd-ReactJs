@@ -12,22 +12,22 @@ const FormInput = ({ children, inputType, inputValue, inputMethod }) => {
   } = useForm();
 
   useEffect(() => {
-    setValue("input", inputValue);
+    setValue("form_input", inputValue);
   }, [setValue]);
 
   const onSubmit = (data) => {
-    if (input == data.input) return;
+    if (input == data.form_input) return;
 
-    setInput(data.input);
+    setInput(data.form_input);
     inputMethod(data);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="input-control-form">
       <section className="form-control-input">
-        <input type={inputType} id="input" className="form-control" {...register("input", { required: true })} />
+        <input type={inputType} id="input" className="form-control" {...register("form_input", { required: true })} />
       </section>
-      {errors.input && errors.input.type === "required" && <span className="text-danger small-text">Not Valid</span>}
+      {errors.form_input && errors.form_input.type === "required" && <span className="text-danger small-text">Not Valid</span>}
       <section className="form-control-submit">{children}</section>
     </form>
   );
