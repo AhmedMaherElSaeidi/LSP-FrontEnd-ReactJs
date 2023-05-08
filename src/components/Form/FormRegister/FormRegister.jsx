@@ -4,11 +4,13 @@ import { API_URL } from "../../../core/globals";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+
 import { HiLibrary } from "react-icons/hi";
 import { FaCriticalRole } from "react-icons/fa";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { BsEyeFill, BsGenderAmbiguous } from "react-icons/bs";
 import { MdDriveFileRenameOutline, MdEmail, MdPhone, MdLock } from "react-icons/md";
+
 import "./FormRegister.css";
 import Spinner from "../../Spinner/Spinner";
 import ErrorModal from "../../ErrorModal/ErrorModal";
@@ -42,9 +44,8 @@ const FormRegister = () => {
 
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    if (!formState.isValid) return;
-
     setRegisterData({ ...registerData, loading: true });
+
     data["gender_id"] = data.gender;
     data["status"] = data.type == "normal" ? "inactive" : "active";
 
@@ -54,8 +55,8 @@ const FormRegister = () => {
         navigate("/authenication/login");
       })
       .catch((err) => {
-        console.log(err.response.data.message);
-        setRegisterData({ ...registerData, err: err.response.data.message });
+        // console.log(err.response.data.message);
+        setRegisterData({ ...registerData, loading: false, err: err.response.data.message });
       });
   };
   return (
@@ -152,7 +153,7 @@ const FormRegister = () => {
         {errors.terms && errors.terms.type === "required" && <span className="text-danger">You must agree with the terms and conditions</span>}
       </form>
       {registerData.loading && <Spinner />}
-      {registerData.err && <ErrorModal close={(v) => setRegisterData({ ...registerData, err: v })} />}
+      {registerData.err && <ErrorModal message={registerData.err} close={(v) => setRegisterData({ ...registerData, err: v })} />}
     </>
   );
 };
