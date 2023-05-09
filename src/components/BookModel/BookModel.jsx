@@ -7,7 +7,7 @@ import { VscOpenPreview } from "react-icons/vsc";
 
 import "./BookModel.css";
 
-const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove }) => {
+const BookModel = ({ isbn, bookID, rackNumber, title, author, category, cover, remove }) => {
   return (
     <section className="book-model">
       <img src={cover} alt="Book_Cover" />
@@ -22,7 +22,7 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove })
           <p className="model-text">Rack {rackNumber}</p>
         </section>
         <section className="model-content-icons text-lightblue">
-          <Link className="text-lightblue content-icon" to={"/pages/home/book/" + isbn}>
+          <Link className="text-lightblue content-icon" to={"/pages/home/book/" + bookID}>
             <VscOpenPreview className="fs-2" title="View book" />
           </Link>
         </section>
@@ -30,12 +30,12 @@ const BookModel = ({ isbn, rackNumber, title, author, category, cover, remove })
       {isAuth() && getUser().type == "librarian" && (
         <>
           <span className="edit-icon">
-            <Link className="text-lightblue" to={"/pages/options/update-book/" + isbn}>
+            <Link className="text-lightblue" to={"/pages/options/update-book/" + bookID}>
               <FiEdit />
             </Link>
           </span>
           <span className="trash-icon text-lightblue">
-            <BsTrashFill onClick={() => remove(isbn)} />
+            <BsTrashFill onClick={() => remove(bookID)} />
           </span>
         </>
       )}

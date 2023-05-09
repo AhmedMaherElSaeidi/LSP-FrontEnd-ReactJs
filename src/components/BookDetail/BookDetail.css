@@ -30,6 +30,7 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 1em;
+    width: 100%;
 }
 
 .Book-detail-page .horizontal-card>.card-details>.card-details-bottom-border {
